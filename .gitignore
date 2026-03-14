@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Archivos de construcción/distribución
+dist/
+build/
+*.css.map
+*.css.map
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

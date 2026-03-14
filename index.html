@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]> <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 oldie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="es">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <!--
+  =============================================================================
+  === PLANTILLA DESARROLLADA POR LA OFICINA DE MEDIOS DIGITALES - UNIMEDIOS ===
+  =============================================================================
+  -->
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <meta name="revisit-after" content="1 hour" />
+  <meta name="distribution" content="all" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes" />
+  <meta name="expires" content="1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="all" />
+  <meta name="author" content="OMD - Unimedios / HTML">
+  <link rel="stylesheet" type="text/css" href="css/frontend.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/accesibilidad.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" media="all" />
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/unal.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/new_unal.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/tablet.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/phone.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/small.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/printer.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="css/main_contentV2.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/bs4_fixes.css" media="all" />
+
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/popper.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="js/unal.js" type="text/javascript"></script>
+  <script src="js/accesibilidad.js" type="text/javascript"></script>
+  <script src="js/new_functions.js" type="text/javascript"></script>
+
+  <base href="/">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Ancizar sans', 'sans-serif'],
+            indie: ['cursive'],
+          },
+        },
+      },
+    }
+  </script>
+  <script>
+    addEventListener("DOMContentLoaded", (event) => {
+      const words = ['dinámico', 'estocástico', 'distribuido']
+      document.getElementById('dynamic-word').textContent = words[Math.floor(Math.random() * words.length)]
+    });
+  </script>
+  <!--[if lt IE 9
+      ]><script src="js/html5shiv.js" type="text/javascript"></script
+    ><![endif]-->
+  <!--[if lt IE 9
+      ]><script src="js/respond.js" type="text/javascript"></script
+    ><![endif]-->
+  <title>TLÖN - Facultad de Ingeniería - Universidad Nacional de Colombia</title>
+</head>
+
+<body>
+  <!-- Servicios -->
+  <div id="services">
+    <div id="social-icons-fac">
+      <ul>
+        <li><a href="https://www.facebook.com/unal.ing.bog/" id="ifb" target="_blank"
+            title="Página oficial en Facebook - Facultad de Ingeniería"></a></li>
+        <li><a href="https://twitter.com/IngenieriaUNBog" id="itw" target="_blank"
+            title="Cuenta oficial en Twitter - Facultad de Ingeniería"></a></li>
+        <li><a href="https://www.youtube.com/user/ingenieriaUNBog" id="iyt" target="_blank"
+            title="Cuenta oficial en Youtube - Facultad de Ingeniería"></a></li>
+      </ul>
+    </div>
+    <div class="indicator d-none d-md-block"></div>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="http://correo.unal.edu.co" target="_blank"><img src="images/icnServEmail.png" width="32" height="32"
+            alt="Correo Electrónico">Correo Electrónico</a>
+      </li>
+      <li>
+        <a href="https://dninfoa.unal.edu.co" target="_blank"><img src="images/icnServSia.png" width="32" height="32"
+            alt="Sistema de Información Académica">DNINFOA-SIA</a>
+      </li>
+      <li>
+        <a href="http://bibliotecas.unal.edu.co/" target="_blank"><img src="images/icnServLibrary.png" width="32"
+            height="32" alt="Biblioteca">Bibliotecas</a>
+      </li>
+      <li>
+        <a href="https://personal.unal.edu.co/" target="_blank"><img src="images/icnServCall.png" width="32" height="32"
+            alt="Convocatorias">Convocatorias</a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/decanatura/tratamiento-de-datos.html"
+          target="_blank"><img src="images/icnServDatos.png" width="32" height="32" alt="Tratamiento">Tratamiento de
+          Datos</a>
+      </li>
+
+      <li>
+        <a href="https://portalfinancierocloud.unal.edu.co"><img src="images/icnCentralPagos.png" width="32" height="32"
+            alt="Central Pagos">Central de Pagos</a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/unidad-tic.html"><img src="images/icnStic.png"
+            width="32" height="32" alt="STIC">STIC</a>
+      </li>
+      <li>
+        <a href="http://identidad.unal.edu.co"><img src="images/icnServIdentidad.png" width="32" height="32"
+            alt="Identidad U.N.">Identidad U.N.</a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/images/Guia_basica_identidad_fac_ingenieria.pdf"><img
+            src="images/icnImgFacultad.png" width="32" height="32" alt="Imagen de la facultad">Imagen de la facultad</a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/images/CIRCULAR_1_DE_2019_Directriz_divulgacion.pdf"><img
+            src="images/icnDirectriz.png" width="32" height="32" alt="Directriz de publicación">Directriz de
+          publicación</a>
+      </li>
+      <li>
+        <a href="https://procesofibog.unal.edu.co/unticket/"><img src="images/icnServUnticket.png" width="32"
+            height="32" alt="UN-Ticket">UNTicket - Certificados</a>
+      </li>
+      <li>
+        <a href="https://procesofibog.unal.edu.co/uncupo/"><img src="images/icnServUncupo.png" width="32" height="32"
+            alt="UN-Cupo">Cupo UNAL</a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/concurso-docente2024/" target="_blank"><img
+            src="images/icnServCall.png" width="32" height="32" alt="Convocatorias">Concurso docente</a>
+      </li>
+
+      <!-- <li>
+                <a href="https://ingenieria.unal.edu.co/unticket_mantenimiento/"><img
+                        src="images/icnServUnticketMant.png" width="32" height="32"
+                        alt="UN-Ticket">UN Ticket Mantenimiento</a>
+            </li> -->
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/facultad/directorio.html"><img src="images/icnServDirectorio.png"
+            width="32" height="32" alt="Directorio">Directorio</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <header id="unalTop">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="https://unal.edu.co" class="">
+        <!--[if (gte IE 9)|!(IE)]><!-->
+        <svg width="93%" height="93%" class="tw-mx-auto">
+          <image xlink:href="images/escudoUnal.svg" width="100%" height="100%" class="hidden-print"
+            alt="Escudo de la Universidad Nacional de Colombia" />
+        </svg>
+
+        <!--<![endif]-->
+        <!--[if lt IE 9]>
+            <img
+              src="images/escudoUnal.png"
+              width="93%"
+              height="auto"
+              class="hidden-print"
+            />
+          <![endif]-->
+        <img src="images/escudoUnal_black.png" class="d-none d-print-block"
+          alt="Escudo de la Universidad Nacional de Colombia" />
+      </a>
+    </div>
+    <!-- Seal -->
+    <div class="seal">
+      <img class="hidden-print" alt="Escudo de la República de Colombia" src="images/sealColombia.png" width="66"
+        height="66" />
+
+      <img class="d-none d-print-block" alt="Escudo de la República de Colombia" src="images/sealColombia_black.png"
+        width="66" height="66" />
+    </div>
+
+    <!-- Menú superior -->
+    <div class="firstMenu d-none d-md-block">
+      <div class="content-fluid">
+        <nav class="navbar navbar-expand-md nav navbar-dark">
+          <!-- perfiles -->
+          <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+            <nav id="profiles">
+              <ul class="mr-auto nav justify-content-end">
+                <!-- <ul class="navbar-nav mr-auto nav justify-content-end"> -->
+                <li class="nav-item item_Aspirantes tw-cursor-pointer">
+                  <a href="http://aspirantes.unal.edu.co">Aspirantes</a>
+                </li>
+                <li class="nav-item item_Estudiantes tw-cursor-pointer">
+                  <a href="http://estudiantes.unal.edu.co">Estudiantes</a>
+                </li>
+                <li class="nav-item item_Egresados tw-cursor-pointer">
+                  <a href="http://egresados.unal.edu.co">Egresados</a>
+                </li>
+                <li class="nav-item item_Docentes tw-cursor-pointer">
+                  <a href="http://docentes.unal.edu.co">Docentes</a>
+                </li>
+                <li class="nav-item item_Administrativos tw-cursor-pointer">
+                  <a href="http://administrativos.unal.edu.co">Administrativos</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- redes sociales -->
+          <ul class="socialLinks d-none d-md-block">
+            <li>
+              <a href="https://www.facebook.com/UNALOficial" target="_blank" class="facebook"
+                title="Página oficial en Facebook"></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/UNALOficial" target="_blank" class="twitter"
+                title="Cuenta oficial en Twitter"></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCnE6Zj2llVxcvL5I38B0Ceg" target="_blank" class="youtube"
+                title="Canal oficial de Youtube"></a>
+            </li>
+          </ul>
+          <!-- idioma -->
+          <div class="collapse btn-group languageMenu d-none d-md-block">
+            <div class="btn btn-default dropdown-toggle tw-cursor-pointer" data-toggle="dropdown">
+              es<span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="/">ES - Español</a></li>
+              <!-- <li><a href="index.html#">EN - English</a></li>
+              <li><a href="index.html#">GUC - Wayuunaiki</a></li>
+              <li><a href="index.html#">PBB - Nasa yuwe</a></li> -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Menú inferior -->
+    <div id="bs-navbar" class="navigation d-none d-md-block">
+      <!-- Título del sitio -->
+      <div class="site-url" id="subdominio">
+        <a href="https://tlon.unal.edu.co/">tlon.unal.edu.co</a>
+      </div>
+      <!-- Buscador -->
+      <div class="buscador" id="buscador">
+        <div class="gcse-searchbox-only" data-resultsurl="https://unal.edu.co/resultados-de-la-busqueda/"
+          data-newwindow="true"></div>
+      </div>
+      <!-- Main menu -->
+      <div class="navbar-dark mainMenu" id="main_menu_container">
+        <!-- Items menú principal -->
+        <div class="btn-group ghost_button">
+          <div style="width: 0;
+          padding-left: 0;
+          padding-right: 0;" class="btn disabled" data-toggle="" disabled>
+            <!-- <span class="caret"></span> -->
+          </div>
+        </div>
+        <ul class="btn-group">
+          <li><a href="/" class="btn btn-default">Inicio</a></li>
+          <li class="tw-cursor-pointer">
+            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              ¿Quiénes somos?<span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu dropItem-160">
+              <li><a href="/filosofia" class="tw-flex">Filosofía</a></li>
+              <li><a href="/historia" class="tw-flex">Historia</a></li>
+              <li><a href="/directorio" class="tw-flex">Directorio</a></li>
+            </ul>
+          </li>
+          <li class="tw-cursor-pointer">
+            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Proyecto TLÖÑ<span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu dropItem-160">
+              <li><a href="/concepto" class="tw-flex">Concepto</a></li>
+              <li><a href="/campos-investigacion" class="tw-flex">Campos de Investigación</a></li>
+              <li><a href="/modelo" class="tw-flex">Modelo Social-Inspirado</a></li>
+            </ul>
+          </li>
+          <li class="tw-cursor-pointer">
+            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Actividades<span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu dropItem-160">
+              <li><a href="/investigacion" class="tw-flex">Investigación</a></li>
+              <li><a href="/docencia" class="tw-flex">Docencia</a></li>
+              <li><a href="/extension" class="tw-flex">Extensión</a></li>
+            </ul>
+          </li>
+          <li><a href="/produccion-intelectual" class="btn btn-default">Producción Intelectual</a></li>
+        </ul>
+
+        <!-- Sedes -->
+        <div class="btn-group menu_sedes">
+          <div class="btn btn-default dropdown-toggle tw-cursor-pointer" data-toggle="dropdown">
+            Sedes<span class="caret"></span>
+          </div>
+          <ul class="dropdown-menu" id="sedes">
+            <li>
+              <a class="dropdown-item" href="https://amazonia.unal.edu.co" target="_blank">Amazonia</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://bogota.unal.edu.co" target="_blank">Bogotá</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://caribe.unal.edu.co" target="_blank">Caribe</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://delapaz.unal.edu.co" target="_blank">De La Paz</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://www.manizales.unal.edu.co" target="_blank">Manizales</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://medellin.unal.edu.co" target="_blank">Medellín</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://orinoquia.unal.edu.co" target="_blank">Orinoquia</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://www.palmira.unal.edu.co" target="_blank">Palmira</a>
+              <span class="caret-right"></span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://tumaco-pacifico.unal.edu.co" target="_blank">Tumaco</a>
+              <span class="caret-right"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Servicios label -->
+      <div class="btn-group d-none">
+        <div class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="navbarSupportedContent"
+          data-target="#services">
+          Servicios<span class="caret"></span>
+        </div>
+      </div>
+      <!-- Perfiles -->
+      <div class="btn-group d-none">
+        <div class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="navbarSupportedContent"
+          data-target="#profiles">
+          Perfiles<span class="caret"></span>
+        </div>
+      </div>
+    </div>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-light light-blue lighten-4 main_menu">
+      <!-- Navbar brand -->
+      <a class="navbar-brand d-block d-md-none" href="#"></a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler collapsed d-block d-md-none" type="button" data-toggle="collapse"
+        data-target="#navbar_content" aria-controls="navbar_content" aria-expanded="false"
+        aria-label="Toggle navigation" id="btn_hamburguer">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbar_content">
+        <!-- subdominio -->
+        <div class="site-url" id="container_subdominio_mobil"></div>
+        <!-- buscador -->
+        <div class="buscador" id="container_buscador_mobil"></div>
+        <!-- main -->
+        <div id="container_mainmenu_mobil"></div>
+        <!-- Sedes -->
+        <div class="btn-group d-block d-md-none hidden-print">
+          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_sedes_mobil"
+            aria-controls="container_sedes_mobil">
+            Sedes<span class="caret"> </span>
+          </div>
+        </div>
+        <div class="collapse" id="container_sedes_mobil"></div>
+
+        <!-- Servicios -->
+        <div class="btn-group d-block d-md-none hidden-print">
+          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_servicios_mobil"
+            aria-controls="container_servicios_mobil">
+            Servicios<span class="caret"> </span>
+          </div>
+        </div>
+        <div class="collapse" id="container_servicios_mobil"></div>
+
+        <!-- Perfiles -->
+        <div class="btn-group d-block d-md-none hidden-print">
+          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_profiles_mobil"
+            aria-controls="container_profiles_mobil">
+            Perfiles<span class="caret"> </span>
+          </div>
+        </div>
+        <div class="collapse" id="container_profiles_mobil"></div>
+      </div>
+      <!-- Collapsible content -->
+    </nav>
+  </header>
+
+  <!-- Panel de accesibilidad mobile -->
+  <div class="tx-unal-accesibilidad tw-select-none">
+    <!-- defaultpanel -->
+    <div id="panel-accesibilidad" style="display: none;" class="panel-content container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-3">
+              <h4>Tamaño letra</h4>
+              <button class="boton-panel" id="letra-disminuir" onclick="cambiarTamanioLetra('-')" type="submit" name=""
+                value="">
+                A<sup>-</sup>
+              </button>
+              <button class="boton-panel" id="letra-aumentar" onclick="cambiarTamanioLetra('+')" type="submit" name=""
+                value="">
+                A<sup>+</sup>
+              </button>
+              <input disabled="1" class="letras-porcentaje" id="letter-percent" type="text" name="" value="100%" />
+            </div>
+            <div class="col-md-3">
+              <h4>Cambiar Contrastes</h4>
+              <button class="boton-panel" id="contraste-1" onclick="cambiarContrastes(1)" type="submit" name=""
+                value="">
+                1
+              </button>
+              <button class="boton-panel" id="contraste-2" onclick="cambiarContrastes(2)" type="submit" name=""
+                value="">
+                2
+              </button>
+              <button class="boton-panel" id="contrate-3" onclick="cambiarContrastes(3)" type="submit" name="" value="">
+                3
+              </button>
+            </div>
+            <div class="col-md-3">
+              <h4>Invertir colores</h4>
+              <button class="boton-panel" id="inversor" onclick="invertirColores()" type="submit" name="" value="">
+                Aplicar
+              </button>
+            </div>
+            <div class="col-md-3">
+              <h4>Restablecer ajustes</h4>
+              <button class="boton-panel" id="defaul-config" onclick="defaultConfig()" type="submit" name="" value="">
+                Aplicar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="pestania-accesibilidad" class="tw-block md:tw-hidden" onclick="accesstab()">Panel de
+      Accesibilidad</button>
+  </div>
+
+  <!-- __________________ PANTALLA PRINCIPAL  _____________________________________ -->
+  <main class="tw-w-full tw-bg-white">
+
+    <!-- Panel de accesibilidad web-->
+    <div class="tx-unal-accesibilidad tw-select-none tw-absolute tw-top-0">
+      <button id="pestania-accesibilidad" class="tw-hidden md:tw-block" onclick="accesstab()">Panel de
+        Accesibilidad</button>
+    </div>
+
+    <!-- Banner Principal -->
+    <section class="tw-w-full tw-flex tw-flex-col tw-items-center tw-relative tw-h-auto md:tw-h-[665px] tw-mb-8">
+      <a class="tw-w-full tw-relative" href="https://www.youtube.com/watch?v=203crulPgBc" target="_blank">
+        <video autoplay muted loop playsinline disablepictureinpicture
+          class="tw-object-cover tw-object-left tw-w-full tw-h-[208px] md:tw-h-[605px] tw-shadow-lg tw-brightness-75">
+          <source src="public/video/video_recortado.webm" type="video/webm">
+          Tu navegador no soporta el elemento video.
+        </video>
+        <span
+          class="tw-absolute tw-bottom-0 tw-left-0 xl:tw-bottom-[12%] xl:tw-left-10 tw-bg-[#424242B3] tw-bg-opacity-20 tw-w-[180px] tw-h-[60px] xl:tw-w-[290px] xl:tw-h-[80px] tw-z-1 tw-text-white tw-flex tw-items-center tw-text-center tw-px-6 xl:tw-rounded-lg tw-text-[10px] xl:tw-text-[15px]">
+          Investigadora explicando una simulación de ataque por reveshell
+        </span>
+        <img src="public/images/tlon-logo.png" alt="Logo de TLÖN"
+          class="tw-absolute tw-top-10 tw-right-10 tw-w-[54px] tw-h-[38px]" />
+      </a>
+      <div
+        class="tw-bg-[image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/public/images/recorte_banner.png')] tw-bg-center tw-bg-cover tw-bg-no-repeat xl:tw-rounded-xl tw-w-full xl:tw-w-[1260px] xl:tw-absolute xl:tw-bottom-0 tw-justify-center tw-flex tw-py-6">
+        <span
+          class="tw-flex tw-text-white tw-text-xl xl:tw-text-4xl tw-text-center tw-font-bold tw-flex tw-w-full xl:tw-w-[1056px] tw-justify-center tw-select-none">
+          Grupo de Investigación en Redes de Telecomunicaciones Dinámicas y Lenguajes de Programación Distribuidos
+        </span>
+      </div>
+    </section>
+
+    <section class="tw-w-full tw-flex tw-justify-center tw-select-none">
+      <div class="tw-grid tw-grid-cols-4 tw-w-[1058px] tw-gap-[42px]">
+        <img src="public/images/sesionTlon.png" alt="Jovenes investiadores de Uqbar"
+          class="tw-col-span-2 tw-flex tw-flex-col tw-self-center">
+        <div class="tw-col-span-2 tw-flex tw-flex-col tw-justify-center tw-gap-4 tw-text-[20px]">
+          <span class="tw-text-[24px] tw-font-bold">Soluciones para un mundo <span id="dynamic-word"
+              class="tw-underline tw-cursor-help" title="Recarga y abraza el caos controlado... 😉"></span>...</span>
+          <p>
+            El Grupo de Investigación TLÖN se dedica al estudio y desarrollo de soluciones que permiten la integración
+            e intercambio de información en entornos distribuidos y heterogéneos.
+          </p>
+          <p>
+            Nuestra meta es abordar los retos que surgen con las tecnologías emergentes y proponer arquitecturas que
+            respondan a las demandas de escalabilidad, interoperabilidad y eficiencia.
+          </p>
+          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191] 
+            active:tw-bg-[#D9D9D9] tw-transition tw-duration-100 tw-text-decoration-none"
+            onclick="window.open('http://www.hermes.unal.edu.co/pages/Consultas/Grupo.jsf?idGrupo=2220', '_blank')">Conoce
+            nuestra investigación</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-hidden 2xl:tw-flex tw-w-full  tw-justify-center tw-mt-12 ">
+      <div class="tw-grid tw-grid-cols-3 tw-w-[1400px] tw-gap-[42px]">
+        <div class="tw-col-span-3">
+          <span class="tw-flex tw-items-center tw-justify-center tw-text-[24px] tw-font-bold tw-select-none">
+            Nuestos últimos acontecimientos
+          </span>
+        </div>
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
+          onclick="window.open('https://www.youtube.com/live/g-Ks58PYkIM?si=8ape4jwyHbgZbSBH&t=775', '_blank')">
+          <div class="tw-flex tw-w-2/3 tw-justify-center">
+            <img src="images/hacking_activity.png" alt="Muchachos en competencia de hacking"
+              class="tw-rounded-xl tw-w-full">
+          </div>
+          <div class="tw-flex tw-w-1/3">
+            <p class="tw-flex tw-items-center tw-text-[16px] tw-pr-2">
+              Laboratorio de pentesting sobre Windows, analizando la versión de mayor demanda, las
+              principales vulnerabilidades y los conceptos necesarios.
+            </p>
+          </div>
+        </div>
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer
+        hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
+          onclick="window.open('https://www.youtube.com/live/NkWX_oPQQHo?si=UZQUap-B8UMqEE4M&t=25170', '_blank')">
+          <div class="tw-flex tw-w-2/3 tw-justify-center">
+            <img src="images/profe_oscar.png" alt="Conferencia de profesor Oscar Agudelo Rojas"
+              class="tw-rounded-lg tw-w-full">
+          </div>
+          <div class="tw-flex tw-w-1/3">
+            <p class="tw-flex tw-items-center tw-text-[16px] tw-pr-2">
+              Conferencia realizada por nuestro docente Oscar Agudelo sobre la sinergia entre Teoría de Categorías y
+              Seguridad de la Información.
+            </p>
+          </div>
+        </div>
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer
+        hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
+          onclick="window.open('https://www.youtube.com/live/8Rr0miuDpIQ?si=SU3f1oSifIIxoTLX&t=2437', '_blank')">
+          <div class="tw-flex tw-w-2/3 tw-justify-center">
+            <img src="images/call_for_papers.png" alt="Exposicion de pappers en conferencia JCUN"
+              class="tw-rounded-lg tw-w-full">
+          </div>
+          <div class="tw-flex tw-w-1/3">
+            <p class="tw-flex tw-items-center tw-text-[16px] tw-pr-2">
+              En la JCUN 2025 conocimos sobre diversos trabajos de investigación relacionados con la seguridad
+              informática.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-w-full tw-flex tw-justify-center tw-mt-24 tw-select-none">
+      <div class="tw-grid tw-grid-cols-4 tw-w-[1058px] tw-gap-[42px] tw-align-center">
+        <div
+          class="tw-col-span-2 tw-flex tw-flex-col tw-justify-center tw-text-right tw-align-bottom tw-gap-4 tw-text-[20px]">
+          <span class="tw-text-[24px] tw-font-bold tw-select-none">Tecnología al servicio del conocimiento</span>
+          <p>
+            Nuestras líneas de investigación abordan temas clave como sistemas distribuidos, redes, y ciberseguridad,
+            con el objetivo de contribuir al avance tecnológico del país.
+          </p>
+          <p>
+            Desde TLÖN, conectamos teoría y práctica, formando talento humano y desarrollando proyectos que responden a
+            los desafíos actuales en el manejo de información distribuida.
+          </p>
+          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191] 
+            active:tw-bg-[#D9D9D9] tw-transition tw-duration-100 tw-text-decoration-none tw-self-end"
+            onclick="window.open('http://www.hermes.unal.edu.co/pages/Consultas/Grupo.jsf?idGrupo=2220')">Explora
+            nuestras iniciativas</button>
+        </div>
+        <img src="images/mesa_redonda.png" alt="Jovenes investiadores de Uqbar"
+          class="tw-col-span-2 tw-flex tw-flex-col tw-self-center">
+      </div>
+    </section>
+
+    <section class="tw-w-full tw-hidden 2xl:tw-flex tw-justify-center tw-mt-16">
+      <div class="tw-grid tw-grid-cols-3 tw-w-[1400px] tw-gap-[42px]">
+        <div class="tw-col-span-3">
+          <span class="tw-flex tw-items-center tw-justify-center tw-text-[24px] tw-font-bold tw-select-none">
+            Algunos de nuestros proyectos destacados
+          </span>
+        </div>
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
+          onclick="window.open('https://www.youtube.com/live/-Ez2F-Je038?si=PhoLD3Vn1AxAw3Xj', '_blank')">
+          <div class="tw-flex tw-w-1/3">
+            <p class="tw-flex tw-items-center tw-text-[16px] tw-pl-2 tw-text-right">
+              La tambien conocida como primi-feria es el espacio donde los semilleros de investigacion de la Facultad de
+              Ingenieria muestran sus avances.
+            </p>
+          </div>
+          <div class="tw-flex tw-w-2/3 tw-justify-center">
+            <img src="images/feria_semilleros.png" alt="Muchachos en feria de semilleros de la facultad de ingenieria sede bogota"
+              class="tw-rounded-xl tw-w-full">
+          </div>
+        </div>
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
+          onclick="window.open('https://ingenieria.javeriana.edu.co/2do-encuentro-internacional-ciberseguridad', '_blank')">
+          <div class="tw-flex tw-w-1/3">
+            <p class="tw-flex tw-items-center tw-text-[16px] tw-pl-2 tw-text-right">
+              Nuestros investigadores participaron en la jornada de ciberseguridad organizada por la Universidad Javeriana en
+              2023.
+            </p>
+          </div>
+          <div class="tw-flex tw-w-2/3 tw-justify-center">
+            <img src="images/evento_javeriana.png" alt="Muchachos en competencia de jornada de ciberseguridad en la Universidad Javeriana 2023"
+              class="tw-rounded-xl tw-w-full">
+          </div>
+        </div>
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
+          onclick="window.open('https://www.youtube.com/watch?v=RrtIJx6N6F4', '_blank')">
+          <div class="tw-flex tw-w-1/3">
+            <p class="tw-flex tw-items-center tw-text-[16px] tw-pl-2 tw-text-right">
+              Nuestro estudiante de pregrado presenta su proyecto de tesis enfocado en redes ad hoc en desiertos digitales.
+            </p>
+          </div>
+          <div class="tw-flex tw-w-2/3 tw-justify-center">
+            <img src="images/tesis_camilo.png" alt="Proyecto de tesis de estudiante de pregrado"
+              class="tw-rounded-xl tw-w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-w-full tw-flex tw-justify-center tw-mt-24 tw-select-none">
+      <div class="tw-grid tw-grid-cols-4 tw-w-[1058px] tw-gap-[42px] tw-align-center">
+        <div
+          class="tw-col-span-2 tw-flex tw-flex-col tw-justify-center tw-text-right tw-align-bottom tw-gap-4 tw-text-[20px]">
+          <span class="tw-text-[24px] tw-font-bold tw-select-none">Un Modelo Computacional Social-Inspirado</span>
+          <p class="tw-italic">
+            "El mundo de Tlön no es un mundo de objetos sino de actos. No hay sustantivos, hay verbos impersonales
+            calificados por monosílabos adverbiales. Por ejemplo, no hay palabra que corresponda a la palabra luna, pero
+            hay un verbo que sería lunecer o lunear."<br />
+            - Jorge Luis Borges, Ficciones
+          </p>
+          <p>
+            Creemos en que imaginar un sistema es ya comenzar a transformarlo. Nuestro modelo computacional no solo
+            describe mundos posibles, sino que propone nuevas formas de habitarlos tecnológicamente.
+          </p>
+          <p>
+            Este modelo busca simular y optimizar entornos reales de intercambio de información, incorporando principios
+            de escalabilidad, resiliencia y eficiencia.
+          </p>
+          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191] 
+            active:tw-bg-[#D9D9D9] tw-transition tw-duration-100 tw-text-decoration-none tw-self-end"
+            onclick="window.open('http://www.hermes.unal.edu.co/pages/Consultas/Grupo.jsf?idGrupo=2220', '_blank')">Conoce
+            más
+            acerca del modelo</button>
+        </div>
+        <img src="images/arte_tlon.png" alt="Modelo Computacional de TLÖN"
+          class="tw-col-span-2 tw-flex tw-flex-col tw-self-center">
+      </div>
+    </section>
+
+    <section class="tw-w-full tw-hidden 2xl:tw-flex tw-justify-center tw-mt-16 tw-text-[20px]">
+      <div
+        class="tw-justify-center tw-text-white tw-grid tw-grid-cols-3 tw-w-[1400px] tw-gap-[42px] tw-bg-[image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url('/images/footer_helper.png')] tw-bg-top tw-bg-cover tw-bg-no-repeat xl:tw-rounded-xl tw-w-full xl:tw-w-[1260px]">
+        <div class="tw-mx-10 tw-my-6 tw-w-full tw-flex tw-flex-col tw-justify-center tw-align-center">
+          Navegación interna
+          <ul class="tw-list-disc tw-list-inside tw-ml-4">
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/', '_self')">
+              Inicio</li>
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/historia', '_self')">Historia</li>
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/modelo', '_self')">Modelo Social-Inspirado</li>
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/produccion-intelectual', '_self')">Producción intelectual</li>
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/docencia', '_self')">Actividades de docencia</li>
+          </ul>
+        </div>
+        <div class="tw-mx-10 tw-my-6 tw-w-full tw-flex tw-flex-col tw-justify-center tw-align-center">
+          Recursos
+          <ul class="tw-list-disc tw-list-inside tw-ml-4">
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000016352', '_blank')">
+              GrupLAC - TLÖN</l>
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('https://repositorio.unal.edu.co/home', '_blank')">
+              Repositorio
+              institucional UNAL</li>
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('https://repositorio.unal.edu.co/search?spc.page=1&query=TLON&f.dateIssued.min=2014&view=grid&spc.sf=dc.date.issued&spc.sd=DESC&spc.rpp=40', '_blank')">
+              Tesis y disertaciones</li>
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('https://revistas.unal.edu.co/index.php/index/index', '_blank')">
+              Revistas Institucionales</li>
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('https://ebsco.unalproxy.elogim.com/login.aspx?profile=eds&authtype=ip,uid', '_blank')">
+              Acceso a
+              EBSCO-SINAB</li>
+          </ul>
+        </div>
+        <div class=" tw-mx-10 tw-my-6 tw-w-full tw-flex tw-flex-col tw-justify-center tw-align-center">
+          Herramientas y plataformas
+          <ul class="tw-list-disc tw-list-inside tw-ml-4">
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('https://github.com/uqbarun', '_blank')">Repositorio Uqbar</li>
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('http://www.hermes.unal.edu.co/pages/Consultas/Grupo.jsf?idGrupo=2220', '_blank')">
+              Hermes</li>
+          </ul>
+          Contacto
+          <ul class="tw-list-disc tw-list-inside tw-ml-4">
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('mailto:tlon.unal.edu.co')">
+              Correo oficial</li>
+            <li class="tw-cursor-pointer hover:tw-underline"
+              onclick="window.open('https://www.youtube.com/@UqbarUN', '_blank')">YouTube Uqbar</li>
+          </ul>
+          </ul>
+        </div>
+        </span>
+      </div>
+    </section>
+
+    <br><br><br><br>
+
+  </main>
+
+
+  <!-- _______________________________________FOOTER PLANTILLA_____________________________________________ -->
+  <footer class="clear container-fluid">
+    <div class="row">
+      <nav class="col-lg-3 col-md-3 col-sm-4 col-6 gobiernoLinea">
+        <a href="http://www.legal.unal.edu.co" target="_top">Régimen Legal</a>
+        <a href="http://personal.unal.edu.co" target="_top">Talento humano</a>
+        <a href="https://portaladquisiciones.unal.edu.co/" target="_top">Contratación</a>
+        <a href="http://personal.unal.edu.co" target="_top">Ofertas de empleo</a>
+        <a href="http://launalcuenta.unal.edu.co/" target="_top">Rendición de cuentas</a>
+        <a href="http://docentes.unal.edu.co/concurso-profesoral/" target="_top">Concurso docente</a>
+        <a href="http://www.pagovirtual.unal.edu.co/" target="_top">Pago Virtual</a>
+        <a href="http://controlinterno.unal.edu.co/" target="_top">Control interno</a>
+        <a href="http://siga.unal.edu.co" target="_top">Calidad</a>
+        <a href="http://unal.edu.co/buzon-de-notificaciones/" target="_self">Buzón de notificaciones</a>
+      </nav>
+      <nav class="col-lg-3 col-md-3 col-sm-4 col-6 gobiernoLinea">
+        <a href="https://smartkey.xertica.com/cloudkey/a/unal.edu.co/user/login" target="_top">Correo institucional</a>
+        <a href="index.html#">Mapa del sitio</a>
+        <a href="http://redessociales.unal.edu.co" target="_top">Redes Sociales</a>
+        <a href="index.html#">FAQ</a>
+        <a href="http://quejasyreclamos.unal.edu.co/" target="_self">Quejas y reclamos</a>
+        <a href="http://unal.edu.co/atencion-en-linea/" target="_self">Atención en línea</a>
+        <a href="http://unal.edu.co/encuesta/" target="_self">Encuesta</a>
+        <a href="index.html#">Contáctenos</a>
+        <a href="http://estadisticas.unal.edu.co/" target="_top">Estadísticas</a>
+        <a href="index.html#">Glosario</a>
+      </nav>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-12 footer-info">
+        <div class="row footer-info-spacing">
+          <p class="col-lg-6 col-md-12 col-sm-12 col-6 contacto">
+            <b>Contacto página web:</b><br />
+            Carrera 45 # 26-85<br />
+            Edif. Guillermina Bone Uribe - Of. 110<br />
+            Bogotá D.C., Colombia<br />
+            (+57 601) 316 5000 Ext. 14075
+          </p>
+          <p class="col-lg-6 col-md-12 col-sm-12 col-6 derechos">
+            <a href="https://unal.edu.co/fileadmin/user_upload/docs/legal.pdf" target="_blank">&copy; Copyright
+              2026</a><br />
+            Algunos derechos reservados.<br />
+            <a title="Comuníquese con el administrador de este sitio web"
+              href="mailto:tlon@unal.edu.co">tlon@unal.edu.co</a><br />
+            <a href="https://unal.edu.co/acerca-de-este-sitio-web">Acerca de este sitio web</a><br />
+            Actualización: 21/12/25
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-12 col-12 logos">
+        <div class="row px-3">
+          <div class="col-lg-6 col-md-12 col-sm-6 col-6 no-padding">
+            <div class="row mx-1">
+              <a class="col-md-12 col-sm-6 col-6" href="http://orgullo.unal.edu.co">
+                <img class="hidden-print" alt="Orgullo UN" src="images/log_orgullo.png" width="78" height="21" />
+                <img class="d-none d-print-block" alt="Orgullo UN" src="images/log_orgullo_black.png" width="94"
+                  height="37" />
+              </a>
+              <a class="col-md-12 col-sm-6 col-6 imgAgencia" href="https://agenciadenoticias.unal.edu.co">
+                <img class="hidden-print" alt="Agencia de Noticias" src="images/log_agenc.png" width="94" height="25" />
+                <img class="d-none d-print-block" alt="Agencia de Noticias" src="images/log_agenc_black.png" width="94"
+                  height="37" />
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-6 col-6 no-padding">
+            <div class="row mx-1">
+              <a class="col-md-12 col-sm-6 col-6" href="https://www.gov.co/">
+                <img alt="Portal Único del Estado Colombiano" src="images/log_gobiern.png" width="67" height="51" />
+              </a>
+              <a class="col-md-12 col-sm-6 col-6" href="http://www.contaduria.gov.co/">
+                <img alt="Contaduría General de la República" src="images/log_contra.png" width="67" height="51" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- librerías javascript especial_______________________________________________________________________________________ -->
+
+  <!-- <script src="https://cdns.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script> -->
+  <script src="./js/gsap-public/minified/gsap.min.js"></script>
+  <!-- <script src="https://cdns.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script> -->
+  <script src="./js/gsap-public/minified/ScrollToPlugin.min.js"></script>
+  <script src="./js/gsap-public/minified/ScrollTrigger.min.js"></script>
+  <script src="./js/gsap-public/minified/Draggable.min.js"></script>
+  <!-- <script src="./assets/js/app.js"></script> -->
+
+  <script src="js/simpleParallax.min.js"></script>
+  <!-- swiper carousel---------------------------------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./Resources/Public/js/scripts.js"></script>
+  <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+  <!-- flex-slider -->
+  <script src="/typo3conf/ext/newsslider/Resources/Public/Scripts/jquery.flexslider-min.js?1602067235"></script>
+  <!-- librerías especial_______________________________________________________________________________________ -->
+</body>
+
+</html>
