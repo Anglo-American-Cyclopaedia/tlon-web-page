@@ -80,6 +80,62 @@
 </head>
 
 <body>
+
+  <!-- POPUP -->
+  <div id="tw-popupOverlay" class="tw-fixed tw-inset-0 tw-z-50 tw-hidden tw-items-center tw-justify-center tw-bg-black/50 tw-backdrop-blur-sm">
+    <div class="tw-flex tw-items-center tw-justify-center tw-w-full tw-h-full">
+      <div id="tw-popupContainer" class="tw-relative tw-w-11/12 tw-max-w-xl tw-bg-cover tw-bg-center tw-rounded-2xl tw-shadow-2xl tw-overflow-hidden tw-animate-fadeScale">
+        
+        <div class="tw-absolute tw-inset-0 tw-bg-white/20"></div>
+        
+        <div class="tw-relative tw-z-10 tw-p-6 tw-text-white">
+          <button id="tw-closePopupBtn" class="tw-absolute tw-top-3 tw-right-3 tw-text-white/80 hover:tw-text-white tw-bg-black/30 tw-rounded-full tw-p-1.5 tw-transition">
+            <svg class="tw-w-5 tw-h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
+          <div class="tw-text-center tw-mb-4">
+            <img src="public/images/CTF_2026_05_15.png" alt="Logo del CTF" class="tw-mx-auto tw-mb-2 tw-rounded-md">
+            <h2 class="tw-text-2xl tw-font-bold">¡Únete a nuesto CTF!</h2>
+          </div>
+          
+          <button id="tw-popupActionBtn" class="tw-w-full tw-bg-white/20 hover:tw-bg-white/30 tw-backdrop-blur-sm tw-py-2 tw-rounded-xl tw-font-semibold tw-transition tw-border tw-border-white/30" >
+            Acceder
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('tw-popupOverlay');
+      const closeBtn = document.getElementById('tw-closePopupBtn');
+      const actionBtn = document.getElementById('tw-popupActionBtn');
+
+      function closePopup() {
+        popup.classList.add('tw-hidden');
+        popup.classList.remove('tw-flex');
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closePopup);
+      if (actionBtn) {
+        actionBtn.addEventListener('click', ()=>{
+          closePopup();
+          window.open('https://uqbar.playit.plus/', '_blank');
+        });
+      }
+      
+      if (popup) {
+        popup.addEventListener('click', (e) => {
+          if (e.target === popup) closePopup();
+        });
+      }
+      popup.classList.remove('tw-hidden');
+    });
+  </script>
+
   <!-- Servicios -->
   <div id="services">
     <div id="social-icons-fac">
