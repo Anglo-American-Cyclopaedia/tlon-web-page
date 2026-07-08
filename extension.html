@@ -43,7 +43,7 @@
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/popper.min.js" type="text/javascript"></script>
   <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  <script src="js/unal.js" type="text/javascript"></script>
+  <script src="js/unal.js?v=2" type="text/javascript"></script>
   <script src="js/accesibilidad.js" type="text/javascript"></script>
   <script src="js/new_functions.js" type="text/javascript"></script>
 
@@ -262,66 +262,7 @@
           data-newwindow="true"></div>
       </div>
       <!-- Main menu -->
-      <div class="navbar-dark mainMenu" id="main_menu_container">
-        <!-- Items menú principal -->
-        <div class="btn-group ghost_button">
-          <div style="width: 0;
-          padding-left: 0;
-          padding-right: 0;" class="btn disabled" data-toggle="" disabled>
-            <!-- <span class="caret"></span> -->
-          </div>
-
-
-        </div>
-        <div class="btn-group">
-          <a href="/" class="btn btn-default">Inicio</a>
-          <!-- <a href="/about.html" class="btn btn-default">¿Quiénes somos?</a> -->
-        </div>
-        <!-- Sedes -->
-        <div class="btn-group menu_sedes">
-          <div class="btn btn-default dropdown-toggle tw-cursor-pointer" data-toggle="dropdown">
-            Sedes<span class="caret"></span>
-          </div>
-          <ul class="dropdown-menu" id="sedes">
-            <li>
-              <a class="dropdown-item" href="https://amazonia.unal.edu.co" target="_blank">Amazonia</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://bogota.unal.edu.co" target="_blank">Bogotá</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://caribe.unal.edu.co" target="_blank">Caribe</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://delapaz.unal.edu.co" target="_blank">De La Paz</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://www.manizales.unal.edu.co" target="_blank">Manizales</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://medellin.unal.edu.co" target="_blank">Medellín</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://orinoquia.unal.edu.co" target="_blank">Orinoquia</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://www.palmira.unal.edu.co" target="_blank">Palmira</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://tumaco-pacifico.unal.edu.co" target="_blank">Tumaco</a>
-              <span class="caret-right"></span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="navbar-dark mainMenu" id="main_menu_container" data-component="main-menu"></div>
       <!-- Servicios label -->
       <div class="btn-group d-none">
         <div class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="navbarSupportedContent"
@@ -389,92 +330,76 @@
     </nav>
   </header>
 
-  <!-- defaultpanel -->
-  <!-- Panel de accesibilidad -->
-  <div class="tx-unal-accesibilidad tw-select-none">
-    <!-- defaultpanel -->
-    <div id="panel-accesibilidad" style="display: none;" class="panel-content container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-3">
-              <h4>Tamaño letra</h4>
-              <button class="boton-panel" id="letra-disminuir" onclick="cambiarTamanioLetra('-')" type="submit" name=""
-                value="">
-                A<sup>-</sup>
-              </button>
-              <button class="boton-panel" id="letra-aumentar" onclick="cambiarTamanioLetra('+')" type="submit" name=""
-                value="">
-                A<sup>+</sup>
-              </button>
-              <input disabled="1" class="letras-porcentaje" id="letter-percent" type="text" name="" value="100%" />
-            </div>
-            <div class="col-md-3">
-              <h4>Cambiar Contrastes</h4>
-              <button class="boton-panel" id="contraste-1" onclick="cambiarContrastes(1)" type="submit" name=""
-                value="">
-                1
-              </button>
-              <button class="boton-panel" id="contraste-2" onclick="cambiarContrastes(2)" type="submit" name=""
-                value="">
-                2
-              </button>
-              <button class="boton-panel" id="contrate-3" onclick="cambiarContrastes(3)" type="submit" name="" value="">
-                3
-              </button>
-            </div>
-            <div class="col-md-3">
-              <h4>Invertir colores</h4>
-              <button class="boton-panel" id="inversor" onclick="invertirColores()" type="submit" name="" value="">
-                Aplicar
-              </button>
-            </div>
-            <div class="col-md-3">
-              <h4>Restablecer ajustes</h4>
-              <button class="boton-panel" id="defaul-config" onclick="defaultConfig()" type="submit" name="" value="">
-                Aplicar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /content wrapper for padding -->
-    <div id="pestania-accesibilidad" class="">Panel de Accesibilidad</div>
-  </div>
+  <div class="tx-unal-accesibilidad tw-select-none" data-component="accessibility-panel"></div>
+  <div class="tx-unal-accesibilidad tw-select-none tw-absolute" data-component="accessibility-tab"></div>
   <!-- /content wrapper for padding -->
 
   <!-- __________________ PANTALLA PRINCIPAL  _____________________________________ -->
   <!-- Contenido -->
   <main class="detalle">
-    <!-- <div class="breadcrumb-class">
-      Está en:<a href="index.html" target="_self" title="Inicio">Inicio</a>/
-      <span>Item menu ejemplo</span>
-    </div> -->
-    <section class="tw-w-full tw-flex tw-flex-col tw-mt-4 tw-items-center">
-      <p class="tw-text-2xl tw-mt-10">
-        Estamos trabajando para ofrecerte una mejor experiencia en nuestro sitio web.
-        <br>
-        Mientras tanto, puedes ponerte en contacto con nosotros a través de:
-        <br>
-      </p>
-      <div class="tw-bg-white tw-w-2/3 tw-flex tw-flex-col tw-text-xl tw-items-center tw-rounded-xl tw-mt-8">
-        <div class="tw-px-4 tw-py-6 tw-flex tw-flex-col">
-          <span>
-            <b>Contacto:</b> Jorge Eduardo Ortiz Triviño - Director
-          </span>
-          <span>
-            <b>Dirección:</b> Edificio. 453 - Of. 110. Ciudad Universitaria - Carrera 45 # 26-85. Bogotá D.C., Colombia
-          </span>
-          <span>
-            <b>Teléfono:</b> (+57) (601) 316 5000 - ext. 14075
-          </span>
+    <div data-component="banner" data-label="Actividades del grupo TLÖN"></div>
+
+    <section class="tw-max-w-6xl tw-mx-auto tw-px-6 md:tw-px-8 tw-py-16">
+      <div class="tw-text-sm tw-text-gray-500 tw-mb-8">
+        <a href="/" class="hover:tw-text-blue-600">Inicio</a> &gt;
+        <a href="#" class="hover:tw-text-blue-600">Actividades</a> &gt;
+        <span class="tw-text-gray-900 tw-font-medium">Extensión</span>
+      </div>
+
+      <div class="tw-grid md:tw-grid-cols-[1fr_260px] tw-gap-12 tw-items-start tw-mb-14">
+        <div>
+          <h2 class="tw-text-5xl md:tw-text-6xl tw-font-bold">
+            Actividades de Extensión
+          </h2>
+        </div>
+
+        <div class="tw-text-right tw-italic tw-text-base tw-text-gray-600 tw-pt-8">
+          <p>
+            “Se ha establecido que todas las obras son obra de un solo autor,
+            que es intemporal y es anónimo.”
+          </p>
+          <p>Jorge Luis Borges, Ficciones</p>
         </div>
       </div>
-      <br>
-      <span class="tw-text-3xl tw-w-full tw-text-center">
-        Gracias por tu paciencia y comprensión. ¡Volvemos pronto! 😊
-      </span>
+
+      <h3 class="tw-text-2xl tw-font-bold tw-mb-6">Universidad Popular del Cesar - SENA Valledupar</h3>
+
+      <h4 class="tw-font-bold">Entrenamiento Básico en Sistemas Embebidos (9 y 10 de Junio de 2016)</h4>
+      <p class="tw-italic tw-text-gray-600 tw-mb-3">Instructores: Oscar Agudelo Rojas, Henry Zárate Ceballos</p>
+      <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800 tw-mb-8">
+        Proporcionar a los participantes una base sólida y práctica en el
+        desarrollo de sistemas embebidos, abarcando desde la comprensión del
+        hardware hasta la implementación de software de bajo nivel y la
+        conectividad. Los estudiantes aprenderán a interactuar con el sistema
+        operativo Linux, a desarrollar programas en C++ y a manejar protocolos
+        de comunicación, culminando con la integración de sensores y la puesta
+        en marcha de un proyecto final funcional.
+      </p>
+
+      <h4 class="tw-font-bold">Sistemas Embebidos para Agrónica: Automatización y Monitoreo Inteligente (8 de Noviembre de 2016)</h4>
+      <p class="tw-italic tw-text-gray-600 tw-mb-3">Instructores: Oscar Agudelo Rojas, Henry Zárate Ceballos, Joseph Esteban Ramirez</p>
+      <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800 tw-mb-14">
+        Capacitar a los participantes en el diseño, implementación y
+        programación de sistemas embebidos aplicados a la agrónica. El curso
+        provee las herramientas para desarrollar soluciones de automatización
+        de riego, monitoreo de variables ambientales y control inteligente de
+        cultivos, utilizando tecnologías de hardware abierto y software
+        especializado.
+      </p>
+
+      <h3 class="tw-text-2xl tw-font-bold tw-mb-6">UECP Facultad de Ingeniería - Universidad Nacional de Colombia</h3>
+
+      <h4 class="tw-font-bold">Curso en Sistemas Embebidos (3 al 26 de Octubre de 2016)</h4>
+      <p class="tw-italic tw-text-gray-600 tw-mb-3">Instructores: Oscar Agudelo Rojas, Henry Zárate Ceballos</p>
+      <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+        Proporcionar a los participantes una base sólida y práctica en el
+        desarrollo de sistemas embebidos, abarcando desde la comprensión del
+        hardware hasta la implementación de software de bajo nivel y la
+        conectividad. Los estudiantes aprenderán a interactuar con el sistema
+        operativo Linux, a desarrollar programas en C++ y a manejar protocolos
+        de comunicación, culminando con la integración de sensores y la puesta
+        en marcha de un proyecto final funcional.
+      </p>
     </section>
   </main>
 
