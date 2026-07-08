@@ -1,6 +1,19 @@
 # 🌐 tlon-web-page
 Código fuente para la página web del Grupo de Investigación en Redes de Telecomunicaciones Dinámicas y Lenguajes de Programación Distribuidos, TLÖN - https://tlon.unal.edu.co/
 
+## 📐 Lineamientos de diseño
+
+Todo lo visual (colores, tipografía, logos, banners institucionales, uso del escudo,
+etc.) debe seguir el manual oficial de identidad de la Universidad Nacional:
+**[identidad.unal.edu.co](https://identidad.unal.edu.co/)**.
+
+## 🏗️ Arquitectura del código
+
+Antes de tocar el HTML/JS, lee [ARCHITECTURE.md](./ARCHITECTURE.md) — explica los
+componentes reutilizables (banner, menú, panel de accesibilidad), por qué están
+armados así, y el checklist para agregar una página nueva sin romper la consistencia
+entre páginas.
+
 ## 🚀 Entorno de prueba local
 Puedes levantar un entorno de prueba de forma rápida usando Live Server (extensión de VSCode) o Docker con Nginx.
 
