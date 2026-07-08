@@ -43,7 +43,7 @@
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/popper.min.js" type="text/javascript"></script>
   <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  <script src="js/unal.js" type="text/javascript"></script>
+  <script src="js/unal.js?v=2" type="text/javascript"></script>
   <script src="js/accesibilidad.js" type="text/javascript"></script>
   <script src="js/new_functions.js" type="text/javascript"></script>
 
@@ -321,95 +321,7 @@
           data-newwindow="true"></div>
       </div>
       <!-- Main menu -->
-      <div class="navbar-dark mainMenu" id="main_menu_container">
-        <!-- Items menú principal -->
-        <div class="btn-group ghost_button">
-          <div style="width: 0;
-          padding-left: 0;
-          padding-right: 0;" class="btn disabled" data-toggle="" disabled>
-            <!-- <span class="caret"></span> -->
-          </div>
-        </div>
-        <ul class="btn-group">
-          <li><a href="/" class="btn btn-default">Inicio</a></li>
-          <li class="tw-cursor-pointer">
-            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              ¿Quiénes somos?<span class="caret"></span>
-            </div>
-            <ul class="dropdown-menu dropItem-160">
-              <li><a href="/filosofia" class="tw-flex">Filosofía</a></li>
-              <li><a href="/historia" class="tw-flex">Historia</a></li>
-              <li><a href="/directorio" class="tw-flex">Directorio</a></li>
-            </ul>
-          </li>
-          <li class="tw-cursor-pointer">
-            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Proyecto TLÖÑ<span class="caret"></span>
-            </div>
-            <ul class="dropdown-menu dropItem-160">
-              <li><a href="/concepto" class="tw-flex">Concepto</a></li>
-              <li><a href="/campos-investigacion" class="tw-flex">Campos de Investigación</a></li>
-              <li><a href="/modelo" class="tw-flex">Modelo Social-Inspirado</a></li>
-            </ul>
-          </li>
-          <li class="tw-cursor-pointer">
-            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Actividades<span class="caret"></span>
-            </div>
-            <ul class="dropdown-menu dropItem-160">
-              <li><a href="/investigacion" class="tw-flex">Investigación</a></li>
-              <li><a href="/docencia" class="tw-flex">Docencia</a></li>
-              <li><a href="/extension" class="tw-flex">Extensión</a></li>
-            </ul>
-          </li>
-          <li><a href="/produccion-intelectual" class="btn btn-default">Producción Intelectual</a></li>
-        </ul>
-
-        <!-- Sedes -->
-        <div class="btn-group menu_sedes">
-          <div class="btn btn-default dropdown-toggle tw-cursor-pointer" data-toggle="dropdown">
-            Sedes<span class="caret"></span>
-          </div>
-          <ul class="dropdown-menu" id="sedes">
-            <li>
-              <a class="dropdown-item" href="https://amazonia.unal.edu.co" target="_blank">Amazonia</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://bogota.unal.edu.co" target="_blank">Bogotá</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://caribe.unal.edu.co" target="_blank">Caribe</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://delapaz.unal.edu.co" target="_blank">De La Paz</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://www.manizales.unal.edu.co" target="_blank">Manizales</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://medellin.unal.edu.co" target="_blank">Medellín</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://orinoquia.unal.edu.co" target="_blank">Orinoquia</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://www.palmira.unal.edu.co" target="_blank">Palmira</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://tumaco-pacifico.unal.edu.co" target="_blank">Tumaco</a>
-              <span class="caret-right"></span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="navbar-dark mainMenu" id="main_menu_container" data-component="main-menu"></div>
       <!-- Servicios label -->
       <div class="btn-group d-none">
         <div class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="navbarSupportedContent"
@@ -478,66 +390,11 @@
   </header>
 
   <!-- Panel de accesibilidad mobile -->
-  <div class="tx-unal-accesibilidad tw-select-none">
-    <!-- defaultpanel -->
-    <div id="panel-accesibilidad" style="display: none;" class="panel-content container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-3">
-              <h4>Tamaño letra</h4>
-              <button class="boton-panel" id="letra-disminuir" onclick="cambiarTamanioLetra('-')" type="submit" name=""
-                value="">
-                A<sup>-</sup>
-              </button>
-              <button class="boton-panel" id="letra-aumentar" onclick="cambiarTamanioLetra('+')" type="submit" name=""
-                value="">
-                A<sup>+</sup>
-              </button>
-              <input disabled="1" class="letras-porcentaje" id="letter-percent" type="text" name="" value="100%" />
-            </div>
-            <div class="col-md-3">
-              <h4>Cambiar Contrastes</h4>
-              <button class="boton-panel" id="contraste-1" onclick="cambiarContrastes(1)" type="submit" name=""
-                value="">
-                1
-              </button>
-              <button class="boton-panel" id="contraste-2" onclick="cambiarContrastes(2)" type="submit" name=""
-                value="">
-                2
-              </button>
-              <button class="boton-panel" id="contrate-3" onclick="cambiarContrastes(3)" type="submit" name="" value="">
-                3
-              </button>
-            </div>
-            <div class="col-md-3">
-              <h4>Invertir colores</h4>
-              <button class="boton-panel" id="inversor" onclick="invertirColores()" type="submit" name="" value="">
-                Aplicar
-              </button>
-            </div>
-            <div class="col-md-3">
-              <h4>Restablecer ajustes</h4>
-              <button class="boton-panel" id="defaul-config" onclick="defaultConfig()" type="submit" name="" value="">
-                Aplicar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button id="pestania-accesibilidad" class="tw-block md:tw-hidden" onclick="accesstab()">Panel de
-      Accesibilidad</button>
-  </div>
+  <div class="tx-unal-accesibilidad tw-select-none" data-component="accessibility-panel"></div>
+  <div class="tx-unal-accesibilidad tw-select-none tw-absolute" data-component="accessibility-tab"></div>
 
   <!-- __________________ PANTALLA PRINCIPAL  _____________________________________ -->
   <main class="tw-w-full tw-bg-white">
-
-    <!-- Panel de accesibilidad web-->
-    <div class="tx-unal-accesibilidad tw-select-none tw-absolute tw-top-0">
-      <button id="pestania-accesibilidad" class="tw-hidden md:tw-block" onclick="accesstab()">Panel de
-        Accesibilidad</button>
-    </div>
 
     <!-- Banner Principal -->
     <section class="tw-w-full tw-flex tw-flex-col tw-items-center tw-relative tw-h-auto md:tw-h-[665px] tw-mb-8">
