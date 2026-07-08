@@ -90,17 +90,31 @@ function prepare_content_menu(){
     $( "#container_profiles_mobil" ).html( $conten_profiles );
 }
 
+/**
+ * Renders every `[data-component="banner"]` placeholder into the full TLÖN
+ * video banner.
+ *
+ * Attributes read from the placeholder element:
+ * - `data-label` — text shown over the video (defaults to "TLÖN").
+ * - `data-video` — local video file to autoplay/loop (defaults to the site's
+ *   own clip). The banner always shows a local file, never a live embed —
+ *   that's what keeps it looking like a silent looping "gif" instead of a
+ *   real YouTube player with its play/pause/next chrome.
+ * - `data-youtube` — URL the banner links to when clicked ("watch on
+ *   YouTube"). Defaults to the site's own video.
+ */
 function render_banner_components() {
     jQuery("[data-component='banner']").each(function() {
         var $el = jQuery(this);
         var label = $el.data("label") || "TLÖN";
         var videoSrc = $el.data("video") || "public/video/video_recortado.webm";
-        
+        var linkUrl = $el.data("youtube") || "https://www.youtube.com/watch?v=203crulPgBc";
+
         var html = `
     <section
       class="tw-relative tw-z-0 tw-w-screen tw-left-1/2 tw-right-1/2 tw--ml-[50vw] tw--mr-[50vw] tw-flex tw-flex-col tw-items-center tw-h-auto md:tw-h-[665px] tw-mb-8 tw-overflow-hidden">
 
-      <a class="tw-w-full tw-relative tw-block" href="https://www.youtube.com/watch?v=203crulPgBc" target="_blank">
+      <a class="tw-w-full tw-relative tw-block" href="${linkUrl}" target="_blank">
         <video autoplay muted loop playsinline disablepictureinpicture
           class="tw-object-cover tw-object-left tw-w-full tw-h-[208px] md:tw-h-[605px] tw-shadow-lg tw-brightness-75">
           <source src="${videoSrc}" type="video/webm">
@@ -129,7 +143,10 @@ function render_banner_components() {
     });
 }
 
-// Site-wide nav menu — same on every page. Edit here, not in the HTML files.
+/**
+ * Site-wide nav menu — identical on every page by design, no per-page
+ * overrides. Edit here, not in the HTML files, and it updates everywhere.
+ */
 function render_main_menu() {
     var html = `
         <div class="btn-group ghost_button">
@@ -191,7 +208,10 @@ function render_main_menu() {
     jQuery("[data-component='main-menu']").html(html);
 }
 
-// Accessibility panel — same on every page. Edit here, not in the HTML files.
+/**
+ * Accessibility panel (font size, contrast, invert colors) — identical on
+ * every page. Edit here, not in the HTML files.
+ */
 function render_accessibility_panel() {
     var panelHtml = `
     <div id="panel-accesibilidad" style="display: none;" class="panel-content container-fluid">
