@@ -43,7 +43,7 @@
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/popper.min.js" type="text/javascript"></script>
   <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  <script src="js/unal.js" type="text/javascript"></script>
+  <script src="js/unal.js?v=2" type="text/javascript"></script>
   <script src="js/accesibilidad.js" type="text/javascript"></script>
   <script src="js/new_functions.js" type="text/javascript"></script>
 
@@ -262,66 +262,7 @@
           data-newwindow="true"></div>
       </div>
       <!-- Main menu -->
-      <div class="navbar-dark mainMenu" id="main_menu_container">
-        <!-- Items menú principal -->
-        <div class="btn-group ghost_button">
-          <div style="width: 0;
-          padding-left: 0;
-          padding-right: 0;" class="btn disabled" data-toggle="" disabled>
-            <!-- <span class="caret"></span> -->
-          </div>
-
-
-        </div>
-        <div class="btn-group">
-          <a href="/" class="btn btn-default">Inicio</a>
-          <!-- <a href="/about.html" class="btn btn-default">¿Quiénes somos?</a> -->
-        </div>
-        <!-- Sedes -->
-        <div class="btn-group menu_sedes">
-          <div class="btn btn-default dropdown-toggle tw-cursor-pointer" data-toggle="dropdown">
-            Sedes<span class="caret"></span>
-          </div>
-          <ul class="dropdown-menu" id="sedes">
-            <li>
-              <a class="dropdown-item" href="https://amazonia.unal.edu.co" target="_blank">Amazonia</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://bogota.unal.edu.co" target="_blank">Bogotá</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://caribe.unal.edu.co" target="_blank">Caribe</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://delapaz.unal.edu.co" target="_blank">De La Paz</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://www.manizales.unal.edu.co" target="_blank">Manizales</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://medellin.unal.edu.co" target="_blank">Medellín</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://orinoquia.unal.edu.co" target="_blank">Orinoquia</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://www.palmira.unal.edu.co" target="_blank">Palmira</a>
-              <span class="caret-right"></span>
-            </li>
-            <li>
-              <a class="dropdown-item" href="https://tumaco-pacifico.unal.edu.co" target="_blank">Tumaco</a>
-              <span class="caret-right"></span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="navbar-dark mainMenu" id="main_menu_container" data-component="main-menu"></div>
       <!-- Servicios label -->
       <div class="btn-group d-none">
         <div class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="navbarSupportedContent"
@@ -389,92 +330,326 @@
     </nav>
   </header>
 
-  <!-- defaultpanel -->
-  <!-- Panel de accesibilidad -->
-  <div class="tx-unal-accesibilidad tw-select-none">
-    <!-- defaultpanel -->
-    <div id="panel-accesibilidad" style="display: none;" class="panel-content container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-3">
-              <h4>Tamaño letra</h4>
-              <button class="boton-panel" id="letra-disminuir" onclick="cambiarTamanioLetra('-')" type="submit" name=""
-                value="">
-                A<sup>-</sup>
-              </button>
-              <button class="boton-panel" id="letra-aumentar" onclick="cambiarTamanioLetra('+')" type="submit" name=""
-                value="">
-                A<sup>+</sup>
-              </button>
-              <input disabled="1" class="letras-porcentaje" id="letter-percent" type="text" name="" value="100%" />
-            </div>
-            <div class="col-md-3">
-              <h4>Cambiar Contrastes</h4>
-              <button class="boton-panel" id="contraste-1" onclick="cambiarContrastes(1)" type="submit" name=""
-                value="">
-                1
-              </button>
-              <button class="boton-panel" id="contraste-2" onclick="cambiarContrastes(2)" type="submit" name=""
-                value="">
-                2
-              </button>
-              <button class="boton-panel" id="contrate-3" onclick="cambiarContrastes(3)" type="submit" name="" value="">
-                3
-              </button>
-            </div>
-            <div class="col-md-3">
-              <h4>Invertir colores</h4>
-              <button class="boton-panel" id="inversor" onclick="invertirColores()" type="submit" name="" value="">
-                Aplicar
-              </button>
-            </div>
-            <div class="col-md-3">
-              <h4>Restablecer ajustes</h4>
-              <button class="boton-panel" id="defaul-config" onclick="defaultConfig()" type="submit" name="" value="">
-                Aplicar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /content wrapper for padding -->
-    <div id="pestania-accesibilidad" class="">Panel de Accesibilidad</div>
-  </div>
+  <div class="tx-unal-accesibilidad tw-select-none" data-component="accessibility-panel"></div>
+  <div class="tx-unal-accesibilidad tw-select-none tw-absolute" data-component="accessibility-tab"></div>
   <!-- /content wrapper for padding -->
 
   <!-- __________________ PANTALLA PRINCIPAL  _____________________________________ -->
   <!-- Contenido -->
   <main class="detalle">
-    <!-- <div class="breadcrumb-class">
-      Está en:<a href="index.html" target="_self" title="Inicio">Inicio</a>/
-      <span>Item menu ejemplo</span>
-    </div> -->
-    <section class="tw-w-full tw-flex tw-flex-col tw-mt-4 tw-items-center">
-      <p class="tw-text-2xl tw-mt-10">
-        Estamos trabajando para ofrecerte una mejor experiencia en nuestro sitio web.
-        <br>
-        Mientras tanto, puedes ponerte en contacto con nosotros a través de:
-        <br>
-      </p>
-      <div class="tw-bg-white tw-w-2/3 tw-flex tw-flex-col tw-text-xl tw-items-center tw-rounded-xl tw-mt-8">
-        <div class="tw-px-4 tw-py-6 tw-flex tw-flex-col">
-          <span>
-            <b>Contacto:</b> Jorge Eduardo Ortiz Triviño - Director
-          </span>
-          <span>
-            <b>Dirección:</b> Edificio. 453 - Of. 110. Ciudad Universitaria - Carrera 45 # 26-85. Bogotá D.C., Colombia
-          </span>
-          <span>
-            <b>Teléfono:</b> (+57) (601) 316 5000 - ext. 14075
-          </span>
+    <div data-component="banner" data-label="Proyecto TLÖN"></div>
+
+    <section class="tw-max-w-6xl tw-mx-auto tw-px-6 md:tw-px-8 tw-py-16">
+      <div class="tw-text-sm tw-text-gray-500 tw-mb-8">
+        <a href="/" class="hover:tw-text-blue-600">Inicio</a> &gt;
+        <a href="#" class="hover:tw-text-blue-600">Proyecto TLÖN</a> &gt;
+        <span class="tw-text-gray-900 tw-font-medium">Campos de investigación</span>
+      </div>
+
+      <div class="tw-grid md:tw-grid-cols-[1fr_260px] tw-gap-12 tw-items-start tw-mb-12">
+        <div>
+          <h2 class="tw-text-5xl md:tw-text-6xl tw-font-bold tw-mb-10">
+            Campos de investigación
+          </h2>
+        </div>
+
+        <div class="tw-text-right tw-italic tw-text-base tw-text-gray-600 tw-pt-8">
+          <p>
+            “La metafísica de Tlön es también una escuela de la literatura
+            fantástica.”
+          </p>
+          <p>Jorge Luis Borges, Ficciones</p>
         </div>
       </div>
-      <br>
-      <span class="tw-text-3xl tw-w-full tw-text-center">
-        Gracias por tu paciencia y comprensión. ¡Volvemos pronto! 😊
-      </span>
+
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-20">
+        En TLÖN, entendemos la investigación como un ejercicio de invención
+        controlada: cada línea explora un territorio posible, donde teoría,
+        técnica y especulación se entrelazan. Estas rutas temáticas definen
+        los núcleos desde los que articulamos nuestras preguntas,
+        construimos sistemas y expandimos los límites de lo computable.
+      </p>
+
+      <!-- Redes Adhoc -->
+      <h3 class="tw-text-4xl tw-font-bold tw-mb-2">Redes Adhoc</h3>
+      <p class="tw-italic tw-text-gray-600 tw-mb-6">Conectividad estocástica en arquitecturas descentralizadas</p>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+        Una red Ad Hoc es aquel conjunto de computadores interconectados
+        mediante interfaces inalámbricas, que opera en entornos con recursos
+        dinámicos y condiciones variables. Estos sistemas se caracterizan por
+        dos propiedades fundamentales: la autoorganización y la
+        descentralización de la infraestructura. Gracias a estas cualidades,
+        las redes Ad Hoc pueden desarrollar comportamientos pseudosociales,
+        adaptándose desde el momento mismo de su conformación hasta el final
+        de su operación.
+      </p>
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-10 tw-items-center tw-mb-8">
+        <div class="tw-rounded-lg tw-overflow-hidden tw-flex tw-items-center">
+          <img src="images/campos_redadhoc.png" alt="Diagrama: red Ad Hoc — nodos móviles interconectados por WiFi, GSM, Fiber, Ethernet" class="tw-w-full tw-object-contain" />
+        </div>
+        <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+          Desde un punto de vista formal, una red Ad Hoc puede representarse
+          como un grafo aleatorio (Newman, 2003), en el que los nodos
+          —comúnmente móviles— se conectan a través de enlaces dinámicos,
+          llamados aristas, que cambian en función del tiempo y del entorno
+          (por ejemplo, en respuesta a las solicitudes de los usuarios).
+        </p>
+      </div>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-20">
+        Una definición más cercana al enfoque de este proyecto describe
+        estos sistemas como una nube móvil: una plataforma computacional
+        flexible, dinámica y estocástica, que gestiona recursos distribuidos
+        y enlazados de forma inalámbrica. Estos recursos pueden ser
+        modificados, trasladados, aumentados o combinados de manera novedosa,
+        permitiendo nuevas formas de organización computacional (Fitzek &amp;
+        Katz, 2014).
+      </p>
+
+      <!-- Sistemas Multiagente -->
+      <h3 class="tw-text-4xl tw-font-bold tw-mb-2">Sistemas Multiagente</h3>
+      <p class="tw-italic tw-text-gray-600 tw-mb-6">Inteligencia distribuida en acción social-colectiva</p>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+        Los sistemas multiagente forman parte de la inteligencia artificial
+        distribuida y han ganado protagonismo por su capacidad para abordar
+        problemas complejos en entornos cambiantes. Su principal fortaleza
+        radica en la descentralización, lo que permite incorporar propiedades
+        esenciales como la robustez, la adaptación y la autonomía local. En
+        ausencia de un control central, los agentes pueden competir, cooperar
+        o coexistir, generando dinámicas que exigen el diseño de mecanismos
+        para la resolución colectiva de problemas.
+      </p>
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-10 tw-items-center tw-mb-8">
+        <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+          Como se ilustra en la figura, el propósito global del sistema no se
+          impone desde afuera, sino que emerge de las interacciones locales
+          entre los agentes. Cada componente actúa de forma autónoma,
+          ajustando su comportamiento en función del contexto, lo cual
+          permite al sistema evolucionar orgánicamente según las condiciones
+          del entorno.
+          <br /><br />
+          Estas características hacen de los sistemas multiagente un modelo
+          especialmente prometedor para operar sobre redes adhoc, donde la
+          estructura de comunicación y el entorno mismo están en constante
+          transformación.
+        </p>
+        <div class="tw-rounded-lg tw-overflow-hidden tw-flex tw-items-center">
+          <img src="images/campos_multiagente.png" alt="Diagrama: interacciones locales entre agentes S1–S6, control local del sistema" class="tw-w-full tw-object-contain" />
+        </div>
+      </div>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-20">
+        En el contexto del proyecto TLÖN, los sistemas multiagente no solo
+        son una arquitectura funcional, sino también una metáfora operativa:
+        comunidades artificiales que interactúan, se adaptan y evolucionan en
+        entornos inciertos. Cada agente, aunque autónomo, forma parte de un
+        tejido colectivo donde las metas no son impuestas, sino negociadas a
+        través de la dinámica relacional. Esta lógica refuerza la visión del
+        sistema como una ecología computacional capaz de generar orden sin
+        jerarquía, propósito sin programación explícita, y cooperación sin
+        garantías previas.
+      </p>
+
+      <!-- Virtualización -->
+      <h3 class="tw-text-4xl tw-font-bold tw-mb-2">Virtualización</h3>
+      <p class="tw-italic tw-text-gray-600 tw-mb-6">Infraestructuras definidas por software en movimiento</p>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+        La virtualización consiste en crear arquitecturas lógicas a partir de
+        entidades físicas, de forma transparente para el usuario (Wang,
+        Prashant, Tipper, 2013). En el contexto del proyecto TLÖN, la
+        virtualización se plantea como un mecanismo para desplegar servidores
+        de alta disponibilidad sobre infraestructuras móviles y
+        descentralizadas como las redes Ad Hoc. Esta operación requiere
+        considerar enlaces dinámicos, movilidad constante y recursos
+        limitados, lo que desafía las nociones tradicionales de estabilidad y
+        control.
+      </p>
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-10 tw-items-center tw-mb-8">
+        <div class="tw-rounded-lg tw-overflow-hidden tw-flex tw-items-center">
+          <img src="images/campos_virtualizacion.png" alt="Diagrama: infraestructura de red inalámbrica virtualizada" class="tw-w-full tw-object-contain" />
+        </div>
+        <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+          Aunque la virtualización inalámbrica suele asumir entornos
+          predecibles, su integración con redes Ad Hoc supone un reto
+          conceptual y técnico. Muchas de sus condiciones mínimas —como el
+          aislamiento, la coexistencia o la convergencia de recursos—
+          parecen en tensión con la naturaleza espontánea y cambiante de las
+          redes móviles. Sin embargo, justamente en esa tensión surge la
+          posibilidad de imaginar nuevas formas de infraestructura, donde el
+          control no reside en el hardware, sino en una capa lógica
+          distribuida.
+        </p>
+      </div>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-20">
+        El desarrollo de tecnologías como Infraestructura como Servicio
+        (IaaS), Redes como Servicio (NaaS) o Redes Definidas por Software
+        (SDN) da cuenta de esta tendencia: el software se convierte en
+        territorio de despliegue, y la red, más que un medio, es una
+        construcción lógica que se adapta, simula y reconfigura sobre la
+        marcha.
+      </p>
+
+      <!-- Lenguaje -->
+      <h3 class="tw-text-4xl tw-font-bold tw-mb-2">Lenguaje</h3>
+      <p class="tw-italic tw-text-gray-600 tw-mb-6">Ontologías activas para la computación distribuida</p>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+        Un lenguaje es un sistema de signos que permite la expresión y la
+        comunicación entre entes: humanos, animales o máquinas. En los
+        sistemas de cómputo, este principio se concreta en los lenguajes de
+        programación, que se componen de tres niveles fundamentales: léxico,
+        sintáctico y semántico. Lejos de ser herramientas neutrales, los
+        lenguajes de programación modelan el pensamiento, encarnan formas
+        específicas de resolver problemas y establecen las condiciones de
+        posibilidad de lo computable (Aho, 2007; Terfloth, 2008).
+      </p>
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-10 tw-items-center tw-mb-8">
+        <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+          La implementación de un lenguaje requiere la construcción de un
+          compilador, que traduce las instrucciones del usuario a una forma
+          ejecutable por la máquina. Como se muestra en la figura, este
+          proceso se organiza en capas funcionales: el analizador léxico
+          identifica los tokens básicos; el analizador sintáctico verifica la
+          estructura formal; el analizador semántico evalúa si las
+          instrucciones tienen sentido dentro del contexto del lenguaje.
+          Posteriormente, se realiza la generación y optimización de código,
+          preparando las instrucciones para su ejecución eficiente.
+          <br /><br />
+          Estos principios se mantienen, con variaciones, en los lenguajes de
+          dominio específico (DSL), diseñados para resolver problemas
+          particulares dentro de contextos definidos. En el proyecto TLÖN, el
+          lenguaje se concibe no solo como un medio de programación, sino
+          como una ontología activa que estructura las interacciones entre
+          agentes, redes e infraestructuras.
+        </p>
+        <div class="tw-rounded-lg tw-overflow-hidden tw-flex tw-items-center">
+          <img src="images/campos_lenguaje.png" alt="Diagrama: pipeline del compilador — analizador léxico, sintáctico, semántico, generador y optimizador de código" class="tw-w-full tw-object-contain" />
+        </div>
+      </div>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-20">
+        La aparición de los modelos de lenguaje natural (como los LLMs) ha
+        ampliado radicalmente las posibilidades del lenguaje en los sistemas
+        computacionales. Estos modelos permiten interpretar, generar y
+        negociar significado en entornos no deterministas, acercando las
+        interfaces humanas y artificiales. En el marco de TLÖN, los modelos
+        de lenguaje natural abren la puerta a nuevas formas de interacción
+        entre agentes, donde la lógica simbólica se encuentra con la
+        inferencia estadística, y la comunicación deja de ser una simple
+        instrucción para convertirse en acto contextualizado de
+        interpretación.
+      </p>
+
+      <!-- Network Coding -->
+      <h3 class="tw-text-4xl tw-font-bold tw-mb-2">Network Coding</h3>
+      <p class="tw-italic tw-text-gray-600 tw-mb-6">Lógica distribuida en movimiento</p>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+        Network Coding es un paradigma de transmisión propuesto por Ahlswede
+        et al. en el año 2000, que representa una evolución significativa
+        respecto al modelo clásico de comunicación definido por Claude
+        Shannon en 1948. Su principal innovación radica en que los nodos de
+        la red no se limitan a reenviar paquetes, sino que pueden codificarlos
+        activamente, combinando múltiples flujos de datos en tránsito. Este
+        cambio rompe con la lógica tradicional de store-and-forward, abriendo
+        nuevas posibilidades para el diseño de redes adaptativas y
+        eficientes.
+      </p>
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-10 tw-items-center tw-mb-8">
+        <div class="tw-rounded-lg tw-overflow-hidden tw-flex tw-items-center">
+          <img src="images/campos_networkcoding.png" alt="Diagrama: store-and-forward vs. network coding" class="tw-w-full tw-object-contain" />
+        </div>
+        <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+          Al incorporar procesos de codificación intermedia, Network Coding
+          permite mejorar el rendimiento general de la red (throughput),
+          reducir el consumo energético y optimizar el uso del ancho de
+          banda. Estos beneficios lo hacen aplicable a una amplia gama de
+          contextos: desde redes inalámbricas ad hoc y sistemas de
+          distribución de contenido, hasta infraestructuras de
+          almacenamiento distribuido y protocolos criptográficos para el
+          intercambio seguro de claves.
+          <br /><br />
+          Como se muestra en la figura, esta lógica de codificación requiere
+          una visión más flexible y abstracta de la red: ya no como un simple
+          canal de paso, sino como un espacio de transformación algorítmica.
+          Sin embargo, esta potencia viene acompañada de nuevos desafíos en
+          seguridad y privacidad. Por ejemplo, el sistema se vuelve
+          vulnerable a ataques de polución, donde un solo paquete malicioso
+          puede contaminar múltiples flujos de datos codificados. Aun así,
+          Network Coding también ofrece propiedades criptográficas
+          emergentes, como mecanismos de confidencialidad derivados
+          directamente de su estructura.
+        </p>
+      </div>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-20">
+        En el marco de TLÖN, Network Coding se integra como una capa de
+        lógica distribuida, capaz de maximizar la eficiencia y resiliencia de
+        sistemas que, como las redes Ad Hoc, operan en entornos
+        impredecibles, móviles y sin control centralizado.
+      </p>
+
+      <!-- Ciberseguridad -->
+      <h3 class="tw-text-4xl tw-font-bold tw-mb-2">Ciberseguridad</h3>
+      <p class="tw-italic tw-text-gray-600 tw-mb-6">Confianza emergente en sistemas sin centro</p>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+        En los sistemas distribuidos de TLÖN, la seguridad no es una
+        barrera, sino una cualidad activa que debe surgir del propio tejido
+        de relaciones entre los componentes. En contextos donde los nodos
+        pueden moverse, desconectarse o fallar, y donde la autoridad está
+        descentralizada, los enfoques clásicos de seguridad pierden
+        efectividad. Por eso, la ciberseguridad aquí se entiende como un
+        proceso dinámico, capaz de responder en tiempo real a entornos
+        cambiantes.
+      </p>
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-10 tw-items-center tw-mb-20">
+        <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+          Esto implica diseñar mecanismos criptográficos ligeros, compatibles
+          con la limitación de recursos en dispositivos móviles, así como
+          desarrollar protocolos de verificación distribuidos, donde la
+          confianza se construya mediante consenso entre nodos, y no por
+          imposición externa. También se exploran estrategias de tolerancia a
+          fallos maliciosos, resiliencia frente a ataques de envenenamiento
+          de datos y sistemas de reputación adaptativa entre agentes.
+          <br /><br />
+          En el ecosistema TLÖN, la ciberseguridad no sólo defiende: también
+          garantiza la continuidad del diálogo entre agentes, protege la
+          memoria distribuida del sistema y asegura que la colaboración pueda
+          persistir incluso bajo amenaza. La seguridad es, así, una forma de
+          mantener viva la red, sin necesidad de centros ni custodios.
+        </p>
+        <div class="tw-rounded-lg tw-overflow-hidden tw-flex tw-items-center">
+          <img src="images/campos_ciberseguridad.png" alt="Diagrama: red de nodos con verificación distribuida entre pares" class="tw-w-full tw-object-contain" />
+        </div>
+      </div>
+
+      <!-- Sistemas Distribuidos -->
+      <h3 class="tw-text-4xl tw-font-bold tw-mb-2">Sistemas Distribuidos</h3>
+      <p class="tw-italic tw-text-gray-600 tw-mb-6">Coordinación sin jerarquía en arquitecturas en red</p>
+      <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+        El diseño distribuido no es una elección técnica, sino una apuesta
+        estructural por la autonomía, la escalabilidad y la adaptabilidad. En
+        TLÖN, los sistemas distribuidos forman el entramado fundamental que
+        permite desplegar funcionalidades complejas sin depender de nodos
+        centrales ni servidores dedicados. Cada componente del sistema opera
+        como un agente autónomo, capaz de percibir, actuar y tomar decisiones
+        en función de su entorno local. Sin embargo, a través de protocolos
+        de sincronización, mensajes asincrónicos y reglas emergentes, estos
+        nodos logran generar comportamientos colectivos coordinados, desde el
+        balanceo de cargas hasta la toma de decisiones distribuida.
+      </p>
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-10 tw-items-center">
+        <div class="tw-rounded-lg tw-overflow-hidden tw-flex tw-items-center">
+          <img src="images/campos_distribuidos.png" alt="Diagrama: nodos distribuidos como cubos interconectados en red" class="tw-w-full tw-object-contain" />
+        </div>
+        <p class="tw-text-[16px] tw-leading-8 tw-text-gray-800">
+          Este enfoque se materializa en la integración de tecnologías como
+          redes Ad Hoc, sistemas multiagente, virtualización móvil y network
+          coding, las cuales funcionan en conjunto como un solo cuerpo lógico
+          extendido. Lo distribuido no es solo una manera de organizar los
+          recursos: es una forma de inteligencia colectiva, resistente,
+          orgánica y abierta a la contingencia.
+          <br /><br />
+          En TLÖN, los sistemas distribuidos permiten pensar el cómputo no
+          como una secuencia de órdenes centralizadas, sino como una
+          conversación continua entre entidades interdependientes, que se
+          coordinan no por imposición, sino por mutua adaptación.
+        </p>
+      </div>
     </section>
   </main>
 
