@@ -1,0 +1,88 @@
+/* Estilos personalizados para ALEPH - Semillero Académico */
+
+/* Gradiente radial premium para la sección de libros */
+.bg-library-radial {
+  background: radial-gradient(circle at top right, #182c18, #0b1a0c, #050d05);
+}
+
+/* Animación de flotado suave para la letra Aleph 'א' */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    text-shadow: 0 5px 15px rgba(148, 180, 59, 0.1);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+    text-shadow: 0 20px 30px rgba(148, 180, 59, 0.2);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    text-shadow: 0 5px 15px rgba(148, 180, 59, 0.1);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Animación de fade-in para cambio de vistas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Transición para el acento de línea de las categorías */
+.category-line-accent {
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-section:hover .category-line-accent {
+  width: 180px !important;
+}
+
+/* Estilo del scrollbar general */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f9fa;
+}
+
+.bg-library-radial::-webkit-scrollbar-track {
+  background: #0b1a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c3d1d9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94b43b;
+}
+
+.bg-library-radial::-webkit-scrollbar-thumb {
+  background: #254426;
+  border-radius: 4px;
+}
+
+.bg-library-radial::-webkit-scrollbar-thumb:hover {
+  background: #94b43b;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}

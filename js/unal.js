@@ -185,6 +185,7 @@ function render_main_menu() {
             </ul>
           </li>
           <li><a href="/produccion-intelectual" class="btn btn-default">Producción Intelectual</a></li>
+          <li><a href="/babel" class="btn btn-default">Biblioteca</a></li>
         </ul>
 
         <!-- Sedes -->
