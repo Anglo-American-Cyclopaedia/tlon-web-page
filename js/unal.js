@@ -152,7 +152,7 @@ function render_main_menu() {
         <div class="btn-group ghost_button">
           <div style="width: 0; padding-left: 0; padding-right: 0;" class="btn disabled" data-toggle="" disabled></div>
         </div>
-        <ul class="btn-group">
+        <ul class="btn-group tw-flex tw-flex-col">
           <li><a href="/" class="btn btn-default">Inicio</a></li>
           <li class="tw-cursor-pointer">
             <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
