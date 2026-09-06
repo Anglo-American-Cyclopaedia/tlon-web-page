@@ -82,25 +82,30 @@
 <body>
 
   <!-- POPUP -->
-  <!-- <div id="tw-popupOverlay" class="tw-fixed tw-inset-0 tw-z-50 tw-hidden tw-items-center tw-justify-center tw-bg-black/50 tw-backdrop-blur-sm">
+  <div id="tw-popupOverlay"
+    class="tw-fixed tw-inset-0 tw-z-50 tw-hidden tw-items-center tw-justify-center tw-bg-black/50 tw-backdrop-blur-sm tw-font-sans">
     <div class="tw-flex tw-items-center tw-justify-center tw-w-full tw-h-full">
-      <div id="tw-popupContainer" class="tw-relative tw-w-11/12 tw-max-w-xl tw-bg-cover tw-bg-center tw-rounded-2xl tw-shadow-2xl tw-overflow-hidden tw-animate-fadeScale">
-        
+      <div id="tw-popupContainer"
+        class="tw-relative tw-w-11/12 tw-max-w-xl tw-bg-cover tw-bg-center tw-rounded-2xl tw-shadow-2xl tw-overflow-hidden tw-animate-fadeScale">
+
         <div class="tw-absolute tw-inset-0 tw-bg-white/20"></div>
-        
+
         <div class="tw-relative tw-z-10 tw-p-6 tw-text-white">
-          <button id="tw-closePopupBtn" class="tw-absolute tw-top-3 tw-right-3 tw-text-white/80 hover:tw-text-white tw-bg-black/30 tw-rounded-full tw-p-1.5 tw-transition">
+          <button id="tw-closePopupBtn"
+            class="tw-absolute tw-top-3 tw-right-3 tw-text-white/80 hover:tw-text-white tw-bg-black/30 tw-rounded-full tw-p-1.5 tw-transition">
             <svg class="tw-w-5 tw-h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          
-          <div class="tw-text-center tw-mb-4">
-            <img src="public/images/CTF_2026_05_15.png" alt="Logo del CTF" class="tw-mx-auto tw-mb-2 tw-rounded-md">
-            <h2 class="tw-text-2xl tw-font-bold">¡Únete a nuesto CTF!</h2>
+
+          <div class="tw-text-center tw-my-4 tw-flex tw-flex-col tw-gap-y-4">
+            <img src="public/images/jcun2026.png" alt="Logo del Evento" class="tw-mx-auto tw-mb-2 tw-rounded-md">
+            <span class="tw-text-2xl tw-font-bold">¡Únete al evento académico de Ciberseguridad más importante de
+              Colombia!</span>
           </div>
-          
-          <button id="tw-popupActionBtn" class="tw-w-full tw-bg-white/20 hover:tw-bg-white/30 tw-backdrop-blur-sm tw-py-2 tw-rounded-xl tw-font-semibold tw-transition tw-border tw-border-white/30" >
+
+          <button id="tw-popupActionBtn"
+            class="tw-text-xl tw-w-full tw-bg-white/20 hover:tw-bg-white/30 tw-backdrop-blur-sm tw-py-2 tw-rounded-xl tw-font-semibold tw-transition tw-border tw-border-white/30">
             Acceder
           </button>
         </div>
@@ -109,7 +114,7 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const popup = document.getElementById('tw-popupOverlay');
       const closeBtn = document.getElementById('tw-closePopupBtn');
       const actionBtn = document.getElementById('tw-popupActionBtn');
@@ -121,12 +126,12 @@
 
       if (closeBtn) closeBtn.addEventListener('click', closePopup);
       if (actionBtn) {
-        actionBtn.addEventListener('click', ()=>{
+        actionBtn.addEventListener('click', () => {
           closePopup();
-          window.open('https://uqbar.playit.plus/', '_blank');
+          window.open('https://jcunal.com/', '_blank');
         });
       }
-      
+
       if (popup) {
         popup.addEventListener('click', (e) => {
           if (e.target === popup) closePopup();
@@ -134,7 +139,7 @@
       }
       popup.classList.remove('tw-hidden');
     });
-  </script> -->
+  </script>
 
   <!-- Servicios -->
   <div id="services">
@@ -535,7 +540,8 @@
             </p>
           </div>
           <div class="tw-flex tw-w-2/3 tw-justify-center">
-            <img src="images/feria_semilleros.png" alt="Muchachos en feria de semilleros de la facultad de ingenieria sede bogota"
+            <img src="images/feria_semilleros.png"
+              alt="Muchachos en feria de semilleros de la facultad de ingenieria sede bogota"
               class="tw-rounded-xl tw-w-full">
           </div>
         </div>
@@ -544,12 +550,14 @@
           onclick="window.open('https://ingenieria.javeriana.edu.co/2do-encuentro-internacional-ciberseguridad', '_blank')">
           <div class="tw-flex tw-w-1/3">
             <p class="tw-flex tw-items-center tw-text-[16px] tw-pl-2 tw-text-right">
-              Nuestros investigadores participaron en la jornada de ciberseguridad organizada por la Universidad Javeriana en
+              Nuestros investigadores participaron en la jornada de ciberseguridad organizada por la Universidad
+              Javeriana en
               2023.
             </p>
           </div>
           <div class="tw-flex tw-w-2/3 tw-justify-center">
-            <img src="images/evento_javeriana.png" alt="Muchachos en competencia de jornada de ciberseguridad en la Universidad Javeriana 2023"
+            <img src="images/evento_javeriana.png"
+              alt="Muchachos en competencia de jornada de ciberseguridad en la Universidad Javeriana 2023"
               class="tw-rounded-xl tw-w-full">
           </div>
         </div>
@@ -558,7 +566,8 @@
           onclick="window.open('https://www.youtube.com/watch?v=RrtIJx6N6F4', '_blank')">
           <div class="tw-flex tw-w-1/3">
             <p class="tw-flex tw-items-center tw-text-[16px] tw-pl-2 tw-text-right">
-              Nuestro estudiante de pregrado presenta su proyecto de tesis enfocado en redes ad hoc en desiertos digitales.
+              Nuestro estudiante de pregrado presenta su proyecto de tesis enfocado en redes ad hoc en desiertos
+              digitales.
             </p>
           </div>
           <div class="tw-flex tw-w-2/3 tw-justify-center">
@@ -608,9 +617,12 @@
             <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/', '_self')">
               Inicio</li>
             <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/historia', '_self')">Historia</li>
-            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/modelo', '_self')">Modelo Social-Inspirado</li>
-            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/produccion-intelectual', '_self')">Producción intelectual</li>
-            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/docencia', '_self')">Actividades de docencia</li>
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/modelo', '_self')">Modelo
+              Social-Inspirado</li>
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/produccion-intelectual', '_self')">
+              Producción intelectual</li>
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('/docencia', '_self')">Actividades de
+              docencia</li>
           </ul>
         </div>
         <div class="tw-mx-10 tw-my-6 tw-w-full tw-flex tw-flex-col tw-justify-center tw-align-center">
@@ -646,8 +658,7 @@
           </ul>
           Contacto
           <ul class="tw-list-disc tw-list-inside tw-ml-4">
-            <li class="tw-cursor-pointer hover:tw-underline"
-              onclick="window.open('mailto:tlon.unal.edu.co')">
+            <li class="tw-cursor-pointer hover:tw-underline" onclick="window.open('mailto:tlon.unal.edu.co')">
               Correo oficial</li>
             <li class="tw-cursor-pointer hover:tw-underline"
               onclick="window.open('https://www.youtube.com/@UqbarUN', '_blank')">YouTube Uqbar</li>
