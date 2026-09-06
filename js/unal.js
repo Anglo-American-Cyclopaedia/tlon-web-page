@@ -166,7 +166,7 @@ function render_main_menu() {
           </li>
           <li class="tw-cursor-pointer">
             <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Proyecto TLÖÑ<span class="caret"></span>
+              Proyecto TLÖN<span class="caret"></span>
             </div>
             <ul class="dropdown-menu dropItem-160">
               <li><a href="/concepto" class="tw-flex">Concepto</a></li>
