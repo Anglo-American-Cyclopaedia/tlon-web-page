@@ -20,6 +20,7 @@ function checkBck() {
 checkBck();
 jQuery(document).ready(function($) {
     render_banner_components();
+    render_banner_especial();
     render_main_menu();
     render_accessibility_panel();
     prepare_content_menu();
@@ -136,6 +137,58 @@ function render_banner_components() {
           class="tw-flex tw-text-white tw-text-xl xl:tw-text-4xl tw-text-center tw-font-bold tw-w-full xl:tw-w-[1056px] tw-justify-center tw-select-none">
           Grupo de Investigación en Redes de Telecomunicaciones Dinámicas y Lenguajes de Programación Distribuidos
         </span>
+      </div>
+    </section>
+        `;
+        $el.replaceWith(html);
+    });
+}
+
+/**
+ * Renderiza el banner especial para la nueva página manteniendo exactamente
+ * la misma forma, proporciones y diseño que el banner original de video.
+ *
+ * Atributos leídos del placeholder:
+ * - `data-label`   — texto sobre la imagen (por defecto "TLÖN").
+ * - `data-image`   — ruta de la imagen fija (por defecto "images/orbis_tertius_grupo.jpg").
+ * - `data-youtube` — enlace al hacer clic en el banner (por defecto "#").
+ */
+function render_banner_especial() {
+    jQuery("[data-component='banner-orbis-tertius']").each(function() {
+        var $el = jQuery(this);
+        var label = $el.data("label") || "TLÖN";
+        var imgSrc = $el.data("image") || "images/orbis_tertius_grupo.png";
+        var linkUrl = $el.data("youtube") || "#";
+
+        var html = `
+    <section
+      class="tw-relative tw-z-0 tw-w-screen tw-left-1/2 tw-right-1/2 tw--ml-[50vw] tw--mr-[50vw] tw-flex tw-flex-col tw-items-center tw-h-auto md:tw-h-[665px] tw-mb-8 tw-overflow-hidden">
+
+      <a class="tw-w-full tw-relative tw-block" href="${linkUrl}" target="_blank">
+        <img src="${imgSrc}" alt="${label}"
+          class="tw-object-cover tw-object-left tw-w-full tw-h-[208px] md:tw-h-[605px] tw-shadow-lg tw-brightness-75" />
+
+        <span
+          class="tw-absolute tw-bottom-0 tw-left-0 xl:tw-bottom-[12%] xl:tw-left-10 tw-bg-[#424242B3] tw-bg-opacity-20 tw-w-[180px] tw-h-[60px] xl:tw-w-[290px] xl:tw-h-[80px] tw-z-10 tw-text-white tw-flex tw-items-center tw-text-center tw-px-6 xl:tw-rounded-lg tw-text-[10px] xl:tw-text-[15px]">
+          ${label}
+        </span>
+
+        <img src="public/images/tlon-logo.png" alt="Logo de TLÖN"
+          class="tw-absolute tw-top-4 tw-right-4 sm:tw-top-10 sm:tw-right-10 tw-w-[38px] tw-h-[26px] sm:tw-w-[54px] sm:tw-h-[38px] tw-z-10" />
+
+        <div class="tw-absolute tw-top-[52px] tw-right-4 sm:tw-top-[86px] sm:tw-right-10 tw-z-10 tw-flex tw-flex-col tw-items-end tw-bg-black/40 tw-backdrop-blur-sm tw-px-1.5 tw-py-0.5 sm:tw-px-2 sm:tw-py-1 tw-rounded-md tw-border tw-border-white/10">
+          <img src="public/images/orbis_logo_transparente.png" alt="Logo Orbis"
+            class="tw-w-[48px] tw-h-[36px] sm:tw-w-[64px] sm:tw-h-[48px] tw-object-contain tw-opacity-90" />
+        </div>
+        
+      </a>
+
+      <div
+        class="tw-absolute tw-bottom-0 tw-left-1/2 tw--translate-x-1/2 tw-z-20 tw-bg-[image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/public/images/recorte_banner.png')] tw-bg-center tw-bg-cover tw-bg-no-repeat xl:tw-rounded-xl tw-w-full xl:tw-w-[1260px] tw-justify-center tw-flex tw-py-6">
+        <span
+          class="tw-flex tw-text-white tw-text-xl xl:tw-text-4xl tw-text-center tw-font-bold tw-w-full xl:tw-w-[1056px] tw-justify-center tw-select-none">
+            Semillero de Investigación en Sistemas Distribuidos, vinculado al Grupo de Investigación TLÖN.
+          </span>
       </div>
     </section>
         `;

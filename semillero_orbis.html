@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <!--
+  =============================================================================
+  === PLANTILLA DESARROLLADA POR LA OFICINA DE MEDIOS DIGITALES - UNIMEDIOS ===
+  =============================================================================
+  -->
+  
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <meta name="revisit-after" content="1 hour" />
+  <meta name="distribution" content="all" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.5, user-scalable=yes" />
+  <meta name="expires" content="1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="all" />
+  <meta name="author" content="OMD - Unimedios / HTML">
+
+  <link rel="stylesheet" type="text/css" href="css/frontend.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/accesibilidad.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/unal.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/new_unal.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/tablet.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/phone.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/small.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/printer.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="css/main_contentV2.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/bs4_fixes.css" media="all" />
+
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/popper.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="js/unal.js?v=2" type="text/javascript"></script>
+  <script src="js/accesibilidad.js" type="text/javascript"></script>
+  <script src="js/new_functions.js" type="text/javascript"></script>
+
+  <base href="/">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Ancizar sans', 'sans-serif'],
+            indie: ['cursive'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <title>TLÖN - Facultad de Ingeniería - Universidad Nacional de Colombia</title>
+</head>
+
+<body>
+  <!-- Servicios -->
+  <div id="services">
+    <div id="social-icons-fac">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/unal.ing.bog/" id="ifb" target="_blank"
+            title="Página oficial en Facebook - Facultad de Ingeniería"></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/IngenieriaUNBog" id="itw" target="_blank"
+            title="Cuenta oficial en Twitter - Facultad de Ingeniería"></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/ingenieriaUNBog" id="iyt" target="_blank"
+            title="Cuenta oficial en Youtube - Facultad de Ingeniería"></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="indicator d-none d-md-block"></div>
+
+    <ul class="dropdown-menu">
+      <li>
+        <a href="http://correo.unal.edu.co" target="_blank">
+          <img src="images/icnServEmail.png" width="32" height="32" alt="Correo Electrónico">Correo Electrónico
+        </a>
+      </li>
+      <li>
+        <a href="https://dninfoa.unal.edu.co" target="_blank">
+          <img src="images/icnServSia.png" width="32" height="32" alt="Sistema de Información Académica">DNINFOA-SIA
+        </a>
+      </li>
+      <li>
+        <a href="http://bibliotecas.unal.edu.co/" target="_blank">
+          <img src="images/icnServLibrary.png" width="32" height="32" alt="Biblioteca">Bibliotecas
+        </a>
+      </li>
+      <li>
+        <a href="https://personal.unal.edu.co/" target="_blank">
+          <img src="images/icnServCall.png" width="32" height="32" alt="Convocatorias">Convocatorias
+        </a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/decanatura/tratamiento-de-datos.html"
+          target="_blank">
+          <img src="images/icnServDatos.png" width="32" height="32" alt="Tratamiento">Tratamiento de Datos
+        </a>
+      </li>
+      <li>
+        <a href="https://portalfinancierocloud.unal.edu.co">
+          <img src="images/icnCentralPagos.png" width="32" height="32" alt="Central Pagos">Central de Pagos
+        </a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/unidad-tic.html">
+          <img src="images/icnStic.png" width="32" height="32" alt="STIC">STIC
+        </a>
+      </li>
+      <li>
+        <a href="http://identidad.unal.edu.co">
+          <img src="images/icnServIdentidad.png" width="32" height="32" alt="Identidad U.N.">Identidad U.N.
+        </a>
+      </li>
+      <li>
+        <a href="https://ingenieria.bogota.unal.edu.co/facultad/directorio.html">
+          <img src="images/icnServDirectorio.png" width="32" height="32" alt="Directorio">Directorio
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <header id="unalTop">
+    <div class="logo">
+      <a href="https://unal.edu.co">
+        <svg width="93%" height="93%" class="tw-mx-auto">
+          <image xlink:href="images/escudoUnal.svg" width="100%" height="100%" class="hidden-print"
+            alt="Escudo de la Universidad Nacional de Colombia" />
+        </svg>
+        <img src="images/escudoUnal_black.png" class="d-none d-print-block"
+          alt="Escudo de la Universidad Nacional de Colombia" />
+      </a>
+    </div>
+
+    <div class="seal">
+      <img class="hidden-print" alt="Escudo de la República de Colombia" src="images/sealColombia.png" width="66"
+        height="66" />
+      <img class="d-none d-print-block" alt="Escudo de la República de Colombia" src="images/sealColombia_black.png"
+        width="66" height="66" />
+    </div>
+
+    <div class="firstMenu d-none d-md-block">
+      <div class="content-fluid">
+        <nav class="navbar navbar-expand-md nav navbar-dark">
+          <div class="collapse navbar-collapse navbar-default" id="navbarSupportedContent">
+            <nav id="profiles">
+              <ul class="mr-auto nav justify-content-end">
+                <li class="nav-item item_Aspirantes tw-cursor-pointer"><a href="http://aspirantes.unal.edu.co">Aspirantes</a></li>
+                <li class="nav-item item_Estudiantes tw-cursor-pointer"><a href="http://estudiantes.unal.edu.co">Estudiantes</a></li>
+                <li class="nav-item item_Egresados tw-cursor-pointer"><a href="http://egresados.unal.edu.co">Egresados</a></li>
+                <li class="nav-item item_Docentes tw-cursor-pointer"><a href="http://docentes.unal.edu.co">Docentes</a></li>
+                <li class="nav-item item_Administrativos tw-cursor-pointer"><a href="http://administrativos.unal.edu.co">Administrativos</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <ul class="socialLinks d-none d-md-block">
+            <li><a href="https://www.facebook.com/UNALOficial" target="_blank" class="facebook" title="Página oficial en Facebook"></a></li>
+            <li><a href="https://twitter.com/UNALOficial" target="_blank" class="twitter" title="Cuenta oficial en Twitter"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCnE6Zj2llVxcvL5I38B0Ceg" target="_blank" class="youtube" title="Canal oficial de Youtube"></a></li>
+          </ul>
+
+          <div class="collapse btn-group languageMenu d-none d-md-block">
+            <div class="btn btn-default dropdown-toggle tw-cursor-pointer" data-toggle="dropdown">
+              es<span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="/">ES - Español</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div id="bs-navbar" class="navigation d-none d-md-block">
+      <div class="site-url" id="subdominio">
+        <a href="https://tlon.unal.edu.co/">tlon.unal.edu.co</a>
+      </div>
+
+      <div class="buscador" id="buscador">
+        <div class="gcse-searchbox-only" data-resultsurl="https://unal.edu.co/resultados-de-la-busqueda/"
+          data-newwindow="true"></div>
+      </div>
+
+      <div class="navbar-dark mainMenu" id="main_menu_container" data-component="main-menu"></div>
+
+      <div class="btn-group d-none">
+        <div class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="navbarSupportedContent"
+          data-target="#services">
+          Servicios<span class="caret"></span>
+        </div>
+      </div>
+
+      <div class="btn-group d-none">
+        <div class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="navbarSupportedContent"
+          data-target="#profiles">
+          Perfiles<span class="caret"></span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-light light-blue lighten-4 main_menu">
+      <a class="navbar-brand d-block d-md-none" href="#"></a>
+
+      <button class="navbar-toggler collapsed d-block d-md-none" type="button" data-toggle="collapse"
+        data-target="#navbar_content" aria-controls="navbar_content" aria-expanded="false"
+        aria-label="Toggle navigation" id="btn_hamburguer"></button>
+
+      <div class="collapse navbar-collapse" id="navbar_content">
+        <div class="site-url" id="container_subdominio_mobil"></div>
+        <div class="buscador" id="container_buscador_mobil"></div>
+        <div id="container_mainmenu_mobil"></div>
+
+        <div class="btn-group d-block d-md-none hidden-print">
+          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_sedes_mobil"
+            aria-controls="container_sedes_mobil">
+            Sedes<span class="caret"> </span>
+          </div>
+        </div>
+        <div class="collapse" id="container_sedes_mobil"></div>
+
+        <div class="btn-group d-block d-md-none hidden-print">
+          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_servicios_mobil"
+            aria-controls="container_servicios_mobil">
+            Servicios<span class="caret"> </span>
+          </div>
+        </div>
+        <div class="collapse" id="container_servicios_mobil"></div>
+
+        <div class="btn-group d-block d-md-none hidden-print">
+          <div class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#container_profiles_mobil"
+            aria-controls="container_profiles_mobil">
+            Perfiles<span class="caret"> </span>
+          </div>
+        </div>
+        <div class="collapse" id="container_profiles_mobil"></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Panel de accesibilidad -->
+  <div class="tx-unal-accesibilidad tw-select-none" data-component="accessibility-panel"></div>
+  <!-- <div class="tx-unal-accesibilidad tw-select-none tw-absolute" data-component="accessibility-tab"></div> -->
+
+  <main class="detalle">
+    <div data-component="banner-orbis-tertius" data-label="Comunidad Orbis Tertius"></div>
+
+    <section class="tw-max-w-6xl tw-mx-auto tw-px-6 md:tw-px-8 tw-py-16">
+      <div class="tw-text-sm tw-text-gray-500 tw-mb-8">
+        <a href="/" class="hover:tw-text-blue-600">Inicio</a> &gt;
+        <a href="#" class="hover:tw-text-blue-600">Proyecto TLÖN </a> &gt;
+        <span class="tw-text-gray-900 tw-font-medium">Orbis Tertius</span>
+      </div>
+
+      <div class="tw-grid md:tw-grid-cols-[1fr_260px] tw-gap-12 tw-items-start">
+        <div>
+          <h2 class="tw-text-5xl md:tw-text-6xl tw-font-bold tw-mb-10">
+            Orbis Tertius
+          </h2>
+
+          <p class="tw-text-[20px] tw-leading-10 tw-text-gray-800 tw-mb-8">
+            En Orbis Tertius, buscamos contribuir a la investigación y al estudio de los sistemas distribuidos
+            en tecnologías actuales como Internet de las Cosas (IoT), computación en la nube y virtualización,
+            entre otras.
+          </p>
+
+          <p class="tw-text-[20px] tw-leading-10 tw-text-gray-800">
+            Nuestro foco se articula en la formación de estudiantes investigadores con formación en sistemas
+            distribuidos mediante proyectos, promoción y divulgación en la comunidad universitaria. Con el objetivo
+            de realizar proyectos de investigación con alto impacto en la academia y la sociedad, que permitan el
+            desarrollo de nuevas tecnologías y soluciones a problemas complejos.
+          </p>
+        </div>
+
+        <div class="tw-text-right tw-italic tw-text-base tw-text-gray-600 tw-pt-8">
+          <p>El mundo será Tlön.</p>
+          <p>Jorge Luis Borges, Ficciones</p>
+        </div>
+      </div>
+
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-14 tw-items-center tw-mt-28">
+        <div>
+          <h3 class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-8">
+            Sistemas distribuidos al servicio del conocimiento
+          </h3>
+
+          <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+            En Orbis abordamos la administración avanzada de Linux, el despliegue de redes Mesh descentralizadas,
+            IoT en edge computing y la orquestación ligera en alta disponibilidad.
+          </p>
+
+          <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-8">
+            Conectamos la teoría con la práctica, formando talento humano y promoviendo la investigación en
+            arquitecturas resilientes y tolerantes a fallas dentro de la comunidad universitaria.
+          </p>
+
+          <p class="tw-italic tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-0">
+            A través de proyectos con hardware accesible como Raspberry Pi, nuestros integrantes experimentan con
+            protocolos como B.A.T.M.A.N., herramientas de orquestación como K0s y Docker swarm, y la utilización de
+            sensores y protocolos IoT como MQTT, entre otras lineas de investigación.
+          </p>
+        </div>
+
+        <div class="tw-rounded-lg tw-overflow-hidden">
+          <img src="images/montaje_iot.png" alt="Montaje Iot" class="tw-w-full tw-h-[420px] tw-object-cover" />
+        </div>
+      </div>
+
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-14 tw-items-center tw-mt-28">
+        <div class="tw-order-2 md:tw-order-1 tw-rounded-lg tw-overflow-hidden">
+          <img src="images/orbis_ods.png" alt="Visión" class="tw-w-full tw-h-[420px] tw-object-cover" />
+        </div>
+
+        <div class="tw-order-1 md:tw-order-2">
+          <h3 class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-8">
+            Líneas de trabajo e impacto
+          </h3>
+
+          <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-6">
+            Investigamos y desarrollamos en ingeniería de software e inteligencia artificial, integrando las TIC con
+            un enfoque de inclusión social y ciudadanía.
+          </p>
+
+          <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-2">
+            Alineamos nuestra labor con los Objetivos de Desarrollo Sostenible para promover una educación de calidad
+            (ODS 4) y el bienestar integral (ODS 3) a través de la tecnología.
+          </p>
+
+          <!-- <p class="tw-italic tw-text-[18px] tw-leading-9 tw-text-gray-800">
+            ODS 4: Educación inclusiva, equitativa y de calidad.
+          </p>
+
+          <p class="tw-italic tw-text-[18px] tw-leading-9 tw-text-gray-800">
+            ODS 3: Salud y bienestar para todas las edades.
+          </p> -->
+        </div>
+      </div>
+
+      <div class="tw-grid md:tw-grid-cols-2 tw-gap-14 tw-items-center tw-mt-28">
+        <div>
+          <h3 class="tw-text-4xl md:tw-text-5xl tw-font-bold tw-mb-8">
+            Ecosistema y ruta de aprendizaje TLÖN
+          </h3>
+
+          <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-6">
+            La metodología del semillero se articula en sesiones de 2 a 3 horas cada semana, combinando en su mayoria encuentros
+            presenciales y algunos virtuales, dedicados al estudio de sistemas distribuidos computacionales.
+          </p>
+
+          <p class="tw-text-[18px] tw-leading-9 tw-text-gray-800 tw-mb-6">
+            A través de los recursos del grupo TLÖN, 
+            los integrantes acceden a material fisico y de estudio para la realización de prácticas avanzadas con dispositivos embebidos.
+          </p>
+
+          <p class="tw-italic tw-text-[18px] tw-leading-9 tw-text-gray-800">
+            El proceso cuenta con la mentoría de docentes, estudiantes de posgrado y egresados, e incluye un curso en
+            fundamentos de investigación para el aprovechamiento integral de las herramientas institucionales.
+          </p>
+        </div>
+
+        <div class="tw-rounded-lg tw-overflow-hidden">
+          <img src="images/salon_clase_orbis.png" alt="orbis-tertius-grupo-clase" class="tw-w-full tw-h-[420px] tw-object-cover" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="clear container-fluid">
+    <div class="row">
+      <nav class="col-lg-3 col-md-3 col-sm-4 col-6 gobiernoLinea">
+        <a href="http://www.legal.unal.edu.co" target="_top">Régimen Legal</a>
+        <a href="http://personal.unal.edu.co" target="_top">Talento humano</a>
+        <a href="https://portaladquisiciones.unal.edu.co/" target="_top">Contratación</a>
+        <a href="http://personal.unal.edu.co" target="_top">Ofertas de empleo</a>
+        <a href="http://launalcuenta.unal.edu.co/" target="_top">Rendición de cuentas</a>
+        <a href="http://docentes.unal.edu.co/concurso-profesoral/" target="_top">Concurso docente</a>
+        <a href="http://www.pagovirtual.unal.edu.co/" target="_top">Pago Virtual</a>
+        <a href="http://controlinterno.unal.edu.co/" target="_top">Control interno</a>
+        <a href="http://siga.unal.edu.co" target="_top">Calidad</a>
+        <a href="http://unal.edu.co/buzon-de-notificaciones/" target="_self">Buzón de notificaciones</a>
+      </nav>
+
+      <nav class="col-lg-3 col-md-3 col-sm-4 col-6 gobiernoLinea">
+        <a href="https://smartkey.xertica.com/cloudkey/a/unal.edu.co/user/login" target="_top">Correo institucional</a>
+        <a href="index.html#">Mapa del sitio</a>
+        <a href="http://redessociales.unal.edu.co" target="_top">Redes Sociales</a>
+        <a href="index.html#">FAQ</a>
+        <a href="http://quejasyreclamos.unal.edu.co/" target="_self">Quejas y reclamos</a>
+        <a href="http://unal.edu.co/atencion-en-linea/" target="_self">Atención en línea</a>
+        <a href="http://unal.edu.co/encuesta/" target="_self">Encuesta</a>
+        <a href="index.html#">Contáctenos</a>
+        <a href="http://estadisticas.unal.edu.co/" target="_top">Estadísticas</a>
+        <a href="index.html#">Glosario</a>
+      </nav>
+
+      <div class="col-lg-4 col-md-4 col-sm-4 col-12 footer-info">
+        <div class="row footer-info-spacing">
+          <p class="col-lg-6 col-md-12 col-sm-12 col-6 contacto">
+            <b>Contacto página web:</b><br />
+            Carrera 45 # 26-85<br />
+            Edif. Guillermina Bone Uribe - Of. 110<br />
+            Bogotá D.C., Colombia<br />
+            (+57 601) 316 5000 Ext. 14075
+          </p>
+
+          <p class="col-lg-6 col-md-12 col-sm-12 col-6 derechos">
+            <a href="https://unal.edu.co/fileadmin/user_upload/docs/legal.pdf" target="_blank">&copy; Copyright
+              2025</a><br />
+            Algunos derechos reservados.<br />
+            <a title="Comuníquese con el administrador de este sitio web"
+              href="mailto:tlon@unal.edu.co">tlon@unal.edu.co</a><br />
+            <a href="https://unal.edu.co/acerca-de-este-sitio-web">Acerca de este sitio web</a><br />
+            Actualización: 21/01/25
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-2 col-sm-12 col-12 logos">
+        <div class="row px-3">
+          <div class="col-lg-6 col-md-12 col-sm-6 col-6 no-padding">
+            <div class="row mx-1">
+              <a class="col-md-12 col-sm-6 col-6" href="http://orgullo.unal.edu.co">
+                <img class="hidden-print" alt="Orgullo UN" src="images/log_orgullo.png" width="78" height="21" />
+                <img class="d-none d-print-block" alt="Orgullo UN" src="images/log_orgullo_black.png" width="94"
+                  height="37" />
+              </a>
+
+              <a class="col-md-12 col-sm-6 col-6 imgAgencia" href="https://agenciadenoticias.unal.edu.co">
+                <img class="hidden-print" alt="Agencia de Noticias" src="images/log_agenc.png" width="94" height="25" />
+                <img class="d-none d-print-block" alt="Agencia de Noticias" src="images/log_agenc_black.png" width="94"
+                  height="37" />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12 col-sm-6 col-6 no-padding">
+            <div class="row mx-1">
+              <a class="col-md-12 col-sm-6 col-6" href="https://www.gov.co/">
+                <img alt="Portal Único del Estado Colombiano" src="images/log_gobiern.png" width="67" height="51" />
+              </a>
+
+              <a class="col-md-12 col-sm-6 col-6" href="http://www.contaduria.gov.co/">
+                <img alt="Contaduría General de la República" src="images/log_contra.png" width="67" height="51" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/gsap-public/minified/gsap.min.js"></script>
+  <script src="./js/gsap-public/minified/ScrollToPlugin.min.js"></script>
+  <script src="./js/gsap-public/minified/ScrollTrigger.min.js"></script>
+  <script src="./js/gsap-public/minified/Draggable.min.js"></script>
+  <script src="js/simpleParallax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./Resources/Public/js/scripts.js"></script>
+  <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+  <script src="/typo3conf/ext/newsslider/Resources/Public/Scripts/jquery.flexslider-min.js?1602067235"></script>
+</body>
+
+</html>
