@@ -180,7 +180,7 @@ function render_banner_especial() {
           <img src="public/images/orbis_logo_transparente.png" alt="Logo Orbis"
             class="tw-w-[48px] tw-h-[36px] sm:tw-w-[64px] sm:tw-h-[48px] tw-object-contain tw-opacity-90" />
         </div>
-        
+
       </a>
 
       <div
@@ -225,6 +225,14 @@ function render_main_menu() {
               <li><a href="/concepto" class="tw-flex">Concepto</a></li>
               <li><a href="/campos-investigacion" class="tw-flex">Campos de Investigación</a></li>
               <li><a href="/modelo" class="tw-flex">Modelo Social-Inspirado</a></li>
+            </ul>
+          </li>
+          <li class="tw-cursor-pointer">
+            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Semilleros<span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu dropItem-160">
+              <li><a href="/semillero-orbis" class="tw-flex">Orbis Tertius</a></li>
             </ul>
           </li>
           <li class="tw-cursor-pointer">
