@@ -224,7 +224,6 @@ function render_main_menu() {
             <ul class="dropdown-menu dropItem-160">
               <li><a href="/concepto" class="tw-flex">Concepto</a></li>
               <li><a href="/campos-investigacion" class="tw-flex">Campos de Investigación</a></li>
-              <li><a href="/modelo" class="tw-flex">Modelo Social-Inspirado</a></li>
             </ul>
           </li>
           <li class="tw-cursor-pointer">
