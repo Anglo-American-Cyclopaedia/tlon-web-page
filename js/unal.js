@@ -1,94 +1,94 @@
 "use strict";
-(function() {
-    var cx = "008572255874373046644:chip1p1uf-4";
-    var gcse = document.createElement("script");
-    gcse.type = "text/javascript";
-    gcse.async = true;
-    gcse.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//www.google.com/cse/cse.js?cx=" + cx;
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(gcse, s);
+(function () {
+  var cx = "008572255874373046644:chip1p1uf-4";
+  var gcse = document.createElement("script");
+  gcse.type = "text/javascript";
+  gcse.async = true;
+  gcse.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//www.google.com/cse/cse.js?cx=" + cx;
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(gcse, s);
 })();
 
 function checkBck() {
-    jQuery(".gsc-input input").attr("placeholder", "Buscar en la Universidad");
-    if (!jQuery(".gsc-search-button input").attr("src")) {
-        window.setTimeout(function() {
-            checkBck();
-        }, 100);
-    }
+  jQuery(".gsc-input input").attr("placeholder", "Buscar en la Universidad");
+  if (!jQuery(".gsc-search-button input").attr("src")) {
+    window.setTimeout(function () {
+      checkBck();
+    }, 100);
+  }
 }
 checkBck();
-jQuery(document).ready(function($) {
-    render_banner_components();
-    render_banner_especial();
-    render_main_menu();
-    render_accessibility_panel();
-    prepare_content_menu();
-    $("#unalOpenMenuServicios, #unalOpenMenuPerfiles").on("click", function(e) {
-        var $target = $(this).data("target");
-        var $mOffset = $(this).offset();
-        $($target).css({
-            top: $mOffset.top + $(this).outerHeight(),
-            left: $mOffset.left
-        });
+jQuery(document).ready(function ($) {
+  render_banner_components();
+  render_banner_especial();
+  render_main_menu();
+  render_accessibility_panel();
+  prepare_content_menu();
+  $("#unalOpenMenuServicios, #unalOpenMenuPerfiles").on("click", function (e) {
+    var $target = $(this).data("target");
+    var $mOffset = $(this).offset();
+    $($target).css({
+      top: $mOffset.top + $(this).outerHeight(),
+      left: $mOffset.left
     });
+  });
 
-    function serviceMenuStatus() {
-        var $s = $("#services");
-        $s.height($(window).height());
-        $("ul", $s).height($(window).height());
-        if ($(".indicator", "#services").hasClass("active")) {
-            $s.css({
-                right: 0
-            });
-        } else {
-            $s.css({
-                right: parseInt($("#services").width()) * -1
-            });
-        }
-    }
-    $(".indicator", "#services").click(function() {
-        $(this).toggleClass("active");
-        serviceMenuStatus();
-    });
-    $(window).resize(function() {
-        $(".open").removeClass("open");
-        if ($(window).width() > 767) {
-            $("#services").css({
-                right: parseInt($("#services").width()) * -1,
-                left: "auto",
-                top: "auto"
-            });
-            $("#bs-navbar").removeClass("in");
-            serviceMenuStatus();
-        } else {
-            $(".indicator", "#services").removeClass("active");
-        }
-    });
-    $("#services").css({
+  function serviceMenuStatus() {
+    var $s = $("#services");
+    $s.height($(window).height());
+    $("ul", $s).height($(window).height());
+    if ($(".indicator", "#services").hasClass("active")) {
+      $s.css({
+        right: 0
+      });
+    } else {
+      $s.css({
         right: parseInt($("#services").width()) * -1
-    });
+      });
+    }
+  }
+  $(".indicator", "#services").click(function () {
+    $(this).toggleClass("active");
     serviceMenuStatus();
+  });
+  $(window).resize(function () {
+    $(".open").removeClass("open");
+    if ($(window).width() > 767) {
+      $("#services").css({
+        right: parseInt($("#services").width()) * -1,
+        left: "auto",
+        top: "auto"
+      });
+      $("#bs-navbar").removeClass("in");
+      serviceMenuStatus();
+    } else {
+      $(".indicator", "#services").removeClass("active");
+    }
+  });
+  $("#services").css({
+    right: parseInt($("#services").width()) * -1
+  });
+  serviceMenuStatus();
 });
 
-function prepare_content_menu(){
-    var $content_subdominio = $( "#subdominio" ).html();
-    $( "#container_subdominio_mobil" ).html( $content_subdominio );
+function prepare_content_menu() {
+  var $content_subdominio = $("#subdominio").html();
+  $("#container_subdominio_mobil").html($content_subdominio);
 
-    var $content_buscador = $( "#buscador" ).html();
-    $( "#container_buscador_mobil" ).html( $content_buscador );
+  var $content_buscador = $("#buscador").html();
+  $("#container_buscador_mobil").html($content_buscador);
 
-    var $content_mainmenu = $('#main_menu_container').clone().find(".menu_sedes").remove().end().html()
-    $( "#container_mainmenu_mobil" ).html( $content_mainmenu );
+  var $content_mainmenu = $('#main_menu_container').clone().find(".menu_sedes").remove().end().html()
+  $("#container_mainmenu_mobil").html($content_mainmenu);
 
-    var $conten_sedes = $( "#sedes" ).html();
-    $( "#container_sedes_mobil" ).html( $conten_sedes );
+  var $conten_sedes = $("#sedes").html();
+  $("#container_sedes_mobil").html($conten_sedes);
 
-    var $conten_servicios = $( "#services" ).html();
-    $( "#container_servicios_mobil" ).html( "<ul>" + $conten_servicios + "</ul>");
+  var $conten_servicios = $("#services").html();
+  $("#container_servicios_mobil").html("<ul>" + $conten_servicios + "</ul>");
 
-    var $conten_profiles = $( "#profiles" ).html();
-    $( "#container_profiles_mobil" ).html( $conten_profiles );
+  var $conten_profiles = $("#profiles").html();
+  $("#container_profiles_mobil").html($conten_profiles);
 }
 
 /**
@@ -105,13 +105,13 @@ function prepare_content_menu(){
  *   YouTube"). Defaults to the site's own video.
  */
 function render_banner_components() {
-    jQuery("[data-component='banner']").each(function() {
-        var $el = jQuery(this);
-        var label = $el.data("label") || "TLÖN";
-        var videoSrc = $el.data("video") || "public/video/video_recortado.webm";
-        var linkUrl = $el.data("youtube") || "https://www.youtube.com/watch?v=203crulPgBc";
+  jQuery("[data-component='banner']").each(function () {
+    var $el = jQuery(this);
+    var label = $el.data("label") || "TLÖN";
+    var videoSrc = $el.data("video") || "public/video/video_recortado.webm";
+    var linkUrl = $el.data("youtube") || "https://www.youtube.com/watch?v=203crulPgBc";
 
-        var html = `
+    var html = `
     <section
       class="tw-relative tw-z-0 tw-w-screen tw-left-1/2 tw-right-1/2 tw--ml-[50vw] tw--mr-[50vw] tw-flex tw-flex-col tw-items-center tw-h-auto md:tw-h-[665px] tw-mb-8 tw-overflow-hidden">
 
@@ -140,8 +140,8 @@ function render_banner_components() {
       </div>
     </section>
         `;
-        $el.replaceWith(html);
-    });
+    $el.replaceWith(html);
+  });
 }
 
 /**
@@ -154,13 +154,13 @@ function render_banner_components() {
  * - `data-youtube` — enlace al hacer clic en el banner (por defecto "#").
  */
 function render_banner_especial() {
-    jQuery("[data-component='banner-orbis-tertius']").each(function() {
-        var $el = jQuery(this);
-        var label = $el.data("label") || "TLÖN";
-        var imgSrc = $el.data("image") || "images/orbis_tertius_grupo.png";
-        var linkUrl = $el.data("youtube") || "#";
+  jQuery("[data-component='banner-orbis-tertius']").each(function () {
+    var $el = jQuery(this);
+    var label = $el.data("label") || "TLÖN";
+    var imgSrc = $el.data("image") || "images/orbis_tertius_grupo.png";
+    var linkUrl = $el.data("youtube") || "#";
 
-        var html = `
+    var html = `
     <section
       class="tw-relative tw-z-0 tw-w-screen tw-left-1/2 tw-right-1/2 tw--ml-[50vw] tw--mr-[50vw] tw-flex tw-flex-col tw-items-center tw-h-auto md:tw-h-[665px] tw-mb-8 tw-overflow-hidden">
 
@@ -192,8 +192,8 @@ function render_banner_especial() {
       </div>
     </section>
         `;
-        $el.replaceWith(html);
-    });
+    $el.replaceWith(html);
+  });
 }
 
 /**
@@ -201,7 +201,7 @@ function render_banner_especial() {
  * overrides. Edit here, not in the HTML files, and it updates everywhere.
  */
 function render_main_menu() {
-    var html = `
+  var html = `
         <div class="btn-group ghost_button">
           <div style="width: 0; padding-left: 0; padding-right: 0;" class="btn disabled" data-toggle="" disabled></div>
         </div>
@@ -212,8 +212,9 @@ function render_main_menu() {
               ¿Quiénes somos?<span class="caret"></span>
             </div>
             <ul class="dropdown-menu dropItem-160">
-              <li><a href="/filosofia" class="tw-flex">Filosofía</a></li>
               <li><a href="/historia" class="tw-flex">Historia</a></li>
+              <li><a href="/filosofia" class="tw-flex">Filosofía</a></li>
+              <li><a href="/concepto" class="tw-flex">Concepto</a></li>
               <li><a href="/directorio" class="tw-flex">Directorio</a></li>
             </ul>
           </li>
@@ -222,7 +223,6 @@ function render_main_menu() {
               Proyecto TLÖN<span class="caret"></span>
             </div>
             <ul class="dropdown-menu dropItem-160">
-              <li><a href="/concepto" class="tw-flex">Concepto</a></li>
               <li><a href="/campos-investigacion" class="tw-flex">Campos de Investigación</a></li>
             </ul>
           </li>
@@ -266,7 +266,7 @@ function render_main_menu() {
           </ul>
         </div>
     `;
-    jQuery("[data-component='main-menu']").html(html);
+  jQuery("[data-component='main-menu']").html(html);
 }
 
 /**
@@ -274,7 +274,7 @@ function render_main_menu() {
  * every page. Edit here, not in the HTML files.
  */
 function render_accessibility_panel() {
-    var panelHtml = `
+  var panelHtml = `
     <div id="panel-accesibilidad" style="display: none;" class="panel-content container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -305,9 +305,9 @@ function render_accessibility_panel() {
     </div>
     <button id="pestania-accesibilidad" class="tw-block md:tw-hidden" onclick="accesstab()">Panel de Accesibilidad</button>
     `;
-    var tabHtml = `
+  var tabHtml = `
     <button id="pestania-accesibilidad" class="tw-hidden md:tw-block" onclick="accesstab()">Panel de Accesibilidad</button>
     `;
-    jQuery("[data-component='accessibility-panel']").html(panelHtml);
-    jQuery("[data-component='accessibility-tab']").html(tabHtml);
+  jQuery("[data-component='accessibility-panel']").html(panelHtml);
+  jQuery("[data-component='accessibility-tab']").html(tabHtml);
 }
