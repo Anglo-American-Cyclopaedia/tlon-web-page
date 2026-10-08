@@ -216,13 +216,6 @@ function render_main_menu() {
               <li><a href="/filosofia" class="tw-flex">Filosofía</a></li>
               <li><a href="/concepto" class="tw-flex">Concepto</a></li>
               <li><a href="/directorio" class="tw-flex">Directorio</a></li>
-            </ul>
-          </li>
-          <li class="tw-cursor-pointer">
-            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Proyecto TLÖN<span class="caret"></span>
-            </div>
-            <ul class="dropdown-menu dropItem-160">
               <li><a href="/campos-investigacion" class="tw-flex">Campos de Investigación</a></li>
             </ul>
           </li>
