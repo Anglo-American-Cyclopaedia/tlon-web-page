@@ -221,14 +221,6 @@ function render_main_menu() {
           </li>
           <li class="tw-cursor-pointer">
             <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Semilleros<span class="caret"></span>
-            </div>
-            <ul class="dropdown-menu dropItem-160">
-              <li><a href="/semillero-orbis" class="tw-flex">Orbis Tertius</a></li>
-            </ul>
-          </li>
-          <li class="tw-cursor-pointer">
-            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
               Actividades<span class="caret"></span>
             </div>
             <ul class="dropdown-menu dropItem-160">
@@ -237,8 +229,16 @@ function render_main_menu() {
               <li><a href="/extension" class="tw-flex">Extensión</a></li>
             </ul>
           </li>
-          <li><a href="/produccion-intelectual" class="btn btn-default">Producción Intelectual</a></li>
-          <li><a href="/babel" class="btn btn-default">Libros</a></li>
+          <li class="tw-cursor-pointer">
+            <div class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Semilleros<span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu dropItem-160">
+              <li><a href="/semillero-uqbar" class="tw-flex">Uqbar</a></li>
+              <li><a href="/semillero-orbis" class="tw-flex">Orbis Tertius</a></li>
+            </ul>
+          </li>
+          <li><a href="/babel" class="btn btn-default">Biblioteca</a></li>
         </ul>
 
         <!-- Sedes -->
