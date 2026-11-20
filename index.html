@@ -80,7 +80,6 @@
 </head>
 
 <body>
-
   <!-- POPUP -->
   <!-- <div id="tw-popupOverlay"
     class="tw-fixed tw-inset-0 tw-z-50 tw-hidden tw-items-center tw-justify-center tw-bg-black/50 tw-backdrop-blur-sm tw-font-sans">
@@ -112,8 +111,7 @@
       </div>
     </div>
   </div> -->
-
-  <script>
+  <!--<script>
     document.addEventListener('DOMContentLoaded', function () {
       const popup = document.getElementById('tw-popupOverlay');
       const closeBtn = document.getElementById('tw-closePopupBtn');
@@ -139,93 +137,34 @@
       }
       popup.classList.remove('tw-hidden');
     });
-  </script>
+  </script>-->
 
   <!-- Servicios -->
   <div id="services">
     <div id="social-icons-fac">
-      <ul>
-        <li><a href="https://www.facebook.com/unal.ing.bog/" id="ifb" target="_blank"
-            title="Página oficial en Facebook - Facultad de Ingeniería"></a></li>
-        <li><a href="https://twitter.com/IngenieriaUNBog" id="itw" target="_blank"
-            title="Cuenta oficial en Twitter - Facultad de Ingeniería"></a></li>
-        <li><a href="https://www.youtube.com/user/ingenieriaUNBog" id="iyt" target="_blank"
-            title="Cuenta oficial en Youtube - Facultad de Ingeniería"></a></li>
-      </ul>
+      <ul id="social-nets"></ul>
     </div>
     <div class="indicator d-none d-md-block"></div>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="http://correo.unal.edu.co" target="_blank"><img src="images/icnServEmail.png" width="32" height="32"
-            alt="Correo Electrónico">Correo Electrónico</a>
-      </li>
-      <li>
-        <a href="https://dninfoa.unal.edu.co" target="_blank"><img src="images/icnServSia.png" width="32" height="32"
-            alt="Sistema de Información Académica">DNINFOA-SIA</a>
-      </li>
-      <li>
-        <a href="http://bibliotecas.unal.edu.co/" target="_blank"><img src="images/icnServLibrary.png" width="32"
-            height="32" alt="Biblioteca">Bibliotecas</a>
-      </li>
-      <li>
-        <a href="https://personal.unal.edu.co/" target="_blank"><img src="images/icnServCall.png" width="32" height="32"
-            alt="Convocatorias">Convocatorias</a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/decanatura/tratamiento-de-datos.html"
-          target="_blank"><img src="images/icnServDatos.png" width="32" height="32" alt="Tratamiento">Tratamiento de
-          Datos</a>
-      </li>
-
-      <li>
-        <a href="https://portalfinancierocloud.unal.edu.co"><img src="images/icnCentralPagos.png" width="32" height="32"
-            alt="Central Pagos">Central de Pagos</a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/unidad-tic.html"><img src="images/icnStic.png"
-            width="32" height="32" alt="STIC">STIC</a>
-      </li>
-      <li>
-        <a href="http://identidad.unal.edu.co"><img src="images/icnServIdentidad.png" width="32" height="32"
-            alt="Identidad U.N.">Identidad U.N.</a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/images/Guia_basica_identidad_fac_ingenieria.pdf"><img
-            src="images/icnImgFacultad.png" width="32" height="32" alt="Imagen de la facultad">Imagen de la facultad</a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/images/CIRCULAR_1_DE_2019_Directriz_divulgacion.pdf"><img
-            src="images/icnDirectriz.png" width="32" height="32" alt="Directriz de publicación">Directriz de
-          publicación</a>
-      </li>
-      <li>
-        <a href="https://procesofibog.unal.edu.co/unticket/"><img src="images/icnServUnticket.png" width="32"
-            height="32" alt="UN-Ticket">UNTicket - Certificados</a>
-      </li>
-      <li>
-        <a href="https://procesofibog.unal.edu.co/uncupo/"><img src="images/icnServUncupo.png" width="32" height="32"
-            alt="UN-Cupo">Cupo UNAL</a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/concurso-docente2024/" target="_blank"><img
-            src="images/icnServCall.png" width="32" height="32" alt="Convocatorias">Concurso docente</a>
-      </li>
-
-      <!-- <li>
-                <a href="https://ingenieria.unal.edu.co/unticket_mantenimiento/"><img
-                        src="images/icnServUnticketMant.png" width="32" height="32"
-                        alt="UN-Ticket">UN Ticket Mantenimiento</a>
-            </li> -->
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/facultad/directorio.html"><img src="images/icnServDirectorio.png"
-            width="32" height="32" alt="Directorio">Directorio</a>
-      </li>
-    </ul>
+    <ul class="dropdown-menu" id="dropdown-menu"></ul>
   </div>
+
+  <script>
+    fetch('/partials/services.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('dropdown-menu').innerHTML = html;
+      })
+      .catch(err => console.error('Error cargando menú:', err));
+    fetch('/partials/social-nets.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('social-nets').innerHTML = html;
+      })
+      .catch(err => console.error('Error cargando redes sociales:', err));
+  </script>
 
   <!-- Header -->
   <header id="unalTop">
-    <!-- Logo -->
     <div class="logo">
       <a href="https://unal.edu.co" class="">
         <!--[if (gte IE 9)|!(IE)]><!-->
@@ -233,7 +172,6 @@
           <image xlink:href="images/escudoUnal.svg" width="100%" height="100%" class="hidden-print"
             alt="Escudo de la Universidad Nacional de Colombia" />
         </svg>
-
         <!--<![endif]-->
         <!--[if lt IE 9]>
             <img
@@ -247,11 +185,9 @@
           alt="Escudo de la Universidad Nacional de Colombia" />
       </a>
     </div>
-    <!-- Seal -->
     <div class="seal">
       <img class="hidden-print" alt="Escudo de la República de Colombia" src="images/sealColombia.png" width="66"
         height="66" />
-
       <img class="d-none d-print-block" alt="Escudo de la República de Colombia" src="images/sealColombia_black.png"
         width="66" height="66" />
     </div>
@@ -441,7 +377,7 @@
             Nuestra meta es abordar los retos que surgen con las tecnologías emergentes y proponer arquitecturas que
             respondan a las demandas de escalabilidad, interoperabilidad y eficiencia.
           </p>
-          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191] 
+          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191]
             active:tw-bg-[#D9D9D9] tw-transition tw-duration-100 tw-text-decoration-none"
             onclick="window.open('http://www.hermes.unal.edu.co/pages/Consultas/Grupo.jsf?idGrupo=2220', '_blank')">Conoce
             nuestra investigación</button>
@@ -456,7 +392,7 @@
             Nuestos últimos acontecimientos
           </span>
         </div>
-        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer
         hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
           onclick="window.open('https://www.youtube.com/live/g-Ks58PYkIM?si=8ape4jwyHbgZbSBH&t=775', '_blank')">
           <div class="tw-flex tw-w-2/3 tw-justify-center">
@@ -514,7 +450,7 @@
             Desde TLÖN, conectamos teoría y práctica, formando talento humano y desarrollando proyectos que responden a
             los desafíos actuales en el manejo de información distribuida.
           </p>
-          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191] 
+          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191]
             active:tw-bg-[#D9D9D9] tw-transition tw-duration-100 tw-text-decoration-none tw-self-end"
             onclick="window.open('http://www.hermes.unal.edu.co/pages/Consultas/Grupo.jsf?idGrupo=2220')">Explora
             nuestras iniciativas</button>
@@ -531,7 +467,7 @@
             Algunos de nuestros proyectos destacados
           </span>
         </div>
-        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer
         hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
           onclick="window.open('https://www.youtube.com/live/-Ez2F-Je038?si=PhoLD3Vn1AxAw3Xj', '_blank')">
           <div class="tw-flex tw-w-1/3">
@@ -546,7 +482,7 @@
               class="tw-rounded-xl tw-w-full">
           </div>
         </div>
-        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer
         hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
           onclick="window.open('https://ingenieria.javeriana.edu.co/2do-encuentro-internacional-ciberseguridad', '_blank')">
           <div class="tw-flex tw-w-1/3">
@@ -562,7 +498,7 @@
               class="tw-rounded-xl tw-w-full">
           </div>
         </div>
-        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer 
+        <div class="tw-flex tw-justify-center tw-gap-4 tw-bg-[#D9D9D9] tw-rounded-xl tw-shadow-lg tw-cursor-pointer
         hover:tw-bg-[#CCCCCC] active:tw-bg-[#D9D9D9]"
           onclick="window.open('https://www.youtube.com/watch?v=RrtIJx6N6F4', '_blank')">
           <div class="tw-flex tw-w-1/3">
@@ -598,7 +534,7 @@
             Este modelo busca simular y optimizar entornos reales de intercambio de información, incorporando principios
             de escalabilidad, resiliencia y eficiencia.
           </p>
-          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191] 
+          <button class="tw-rounded-lg tw-bg-[#D9D9D9] tw-w-[270px] tw-h-[40px] tw-font-bold tw-text-[20px] tw-shadow-lg hover:tw-bg-[#919191]
             active:tw-bg-[#D9D9D9] tw-transition tw-duration-100 tw-text-decoration-none tw-self-end"
             onclick="window.location.href='/concepto'">Conoce
             más
@@ -611,7 +547,7 @@
 
     <section class="tw-w-full tw-hidden 2xl:tw-flex tw-justify-center tw-mt-16 tw-text-[20px]">
       <div
-        class="tw-justify-center tw-text-white tw-grid tw-grid-cols-3 tw-w-[1400px] tw-gap-[42px] tw-bg-[image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url('/images/footer_helper.png')] tw-bg-top tw-bg-cover tw-bg-no-repeat xl:tw-rounded-xl tw-w-full xl:tw-w-[1260px]">
+        class="tw-justify-center tw-text-white tw-grid tw-grid-cols-3 tw-w-[1400px] tw-gap-[42px] tw-bg-[image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url('/images/footer_helper.png')] tw-bg-top tw-bg-cover tw-bg-no-repeat xl:tw-rounded-xl xl:tw-w-[1260px]">
         <div class="tw-mx-10 tw-my-6 tw-w-full tw-flex tw-flex-col tw-justify-center tw-align-center">
           Navegación interna
           <ul class="tw-list-disc tw-list-inside tw-ml-4">

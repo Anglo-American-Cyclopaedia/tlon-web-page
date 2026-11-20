@@ -67,73 +67,26 @@
   <!-- Servicios -->
   <div id="services">
     <div id="social-icons-fac">
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/unal.ing.bog/" id="ifb" target="_blank"
-            title="Página oficial en Facebook - Facultad de Ingeniería"></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/IngenieriaUNBog" id="itw" target="_blank"
-            title="Cuenta oficial en Twitter - Facultad de Ingeniería"></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/user/ingenieriaUNBog" id="iyt" target="_blank"
-            title="Cuenta oficial en Youtube - Facultad de Ingeniería"></a>
-        </li>
-      </ul>
+      <ul id="social-nets"></ul>
     </div>
-
     <div class="indicator d-none d-md-block"></div>
-
-    <ul class="dropdown-menu">
-      <li>
-        <a href="http://correo.unal.edu.co" target="_blank">
-          <img src="images/icnServEmail.png" width="32" height="32" alt="Correo Electrónico">Correo Electrónico
-        </a>
-      </li>
-      <li>
-        <a href="https://dninfoa.unal.edu.co" target="_blank">
-          <img src="images/icnServSia.png" width="32" height="32" alt="Sistema de Información Académica">DNINFOA-SIA
-        </a>
-      </li>
-      <li>
-        <a href="http://bibliotecas.unal.edu.co/" target="_blank">
-          <img src="images/icnServLibrary.png" width="32" height="32" alt="Biblioteca">Bibliotecas
-        </a>
-      </li>
-      <li>
-        <a href="https://personal.unal.edu.co/" target="_blank">
-          <img src="images/icnServCall.png" width="32" height="32" alt="Convocatorias">Convocatorias
-        </a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/decanatura/tratamiento-de-datos.html"
-          target="_blank">
-          <img src="images/icnServDatos.png" width="32" height="32" alt="Tratamiento">Tratamiento de Datos
-        </a>
-      </li>
-      <li>
-        <a href="https://portalfinancierocloud.unal.edu.co">
-          <img src="images/icnCentralPagos.png" width="32" height="32" alt="Central Pagos">Central de Pagos
-        </a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/es/dependencias/unidad-tic.html">
-          <img src="images/icnStic.png" width="32" height="32" alt="STIC">STIC
-        </a>
-      </li>
-      <li>
-        <a href="http://identidad.unal.edu.co">
-          <img src="images/icnServIdentidad.png" width="32" height="32" alt="Identidad U.N.">Identidad U.N.
-        </a>
-      </li>
-      <li>
-        <a href="https://ingenieria.bogota.unal.edu.co/facultad/directorio.html">
-          <img src="images/icnServDirectorio.png" width="32" height="32" alt="Directorio">Directorio
-        </a>
-      </li>
-    </ul>
+    <ul class="dropdown-menu" id="dropdown-menu"></ul>
   </div>
+
+  <script>
+    fetch('/partials/services.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('dropdown-menu').innerHTML = html;
+      })
+      .catch(err => console.error('Error cargando menú:', err));
+    fetch('/partials/social-nets.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('social-nets').innerHTML = html;
+      })
+      .catch(err => console.error('Error cargando redes sociales:', err));
+  </script>
 
   <!-- Header -->
   <header id="unalTop">
